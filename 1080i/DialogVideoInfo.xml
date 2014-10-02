@@ -472,22 +472,8 @@
 					<description>Plot</description>
 					<include>HiddenObject</include>				
 				</control>
+				<!-- Show full-width plot when no discart is available -->
 				<control type="textbox" id="400">
-					<description>Plot</description>
-					<posx>0</posx>
-					<posy>565</posy>
-					<width>788</width>
-					<height>402</height>
-					<font>font15_textbox</font>
-					<align>left</align>
-					<label>$VAR[VideoInfoPlotVar]</label>
-					<textcolor>white</textcolor>
-					<pagecontrol>60</pagecontrol>
-					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
-					<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(4003)">Conditional</animation>
-					<visible>!Control.IsVisible(50) + !IsEmpty(ListItem.Art(discart))</visible>
-				</control>
-				<control type="textbox" id="401">
 					<description>Plot</description>
 					<posx>0</posx>
 					<posy>560</posy>
@@ -502,6 +488,23 @@
 					<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(4003)">Conditional</animation>
 					<visible>!Control.IsVisible(50) + IsEmpty(ListItem.Art(discart))</visible>
 				</control>
+				<!-- Show narrower plot when a discart is available -->
+				<control type="textbox" id="401">
+					<description>Plot</description>
+					<posx>0</posx>
+					<posy>560</posy>
+					<width>788</width>
+					<height>402</height>
+					<font>font15_textbox</font>
+					<align>left</align>
+					<label>$VAR[VideoInfoPlotVar]</label>
+					<textcolor>white</textcolor>
+					<pagecontrol>60</pagecontrol>
+					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+					<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(4003)">Conditional</animation>
+					<visible>!Control.IsVisible(50) + !IsEmpty(ListItem.Art(discart))</visible>
+				</control>
+				<!-- The discart, when available -->
 				<control type="image">
 					<left>800</left>
 					<top>600</top>
