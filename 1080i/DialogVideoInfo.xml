@@ -511,6 +511,21 @@
 					<texture background="true">$INFO[ListItem.Art(discart)]</texture>
 					<visible>!Control.IsVisible(50) + !IsEmpty(ListItem.Art(discart))</visible>
 				</control>		
+				<control type="button" id="4003">
+					<left>0</left>
+					<top>560</top>
+					<width>1132</width>
+					<height>400</height>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onup condition="Control.IsVisible(60)">PageUp(60)</onup>
+					<onup condition="!Control.IsVisible(60)">9000</onup>
+					<ondown condition="Control.IsVisible(60)">PageDown(60)</ondown>
+					<ondown condition="!Control.IsVisible(60)">9000</ondown>
+					<onclick>Skin.ToggleSetting(VideoInfoPlotToggle)</onclick>
+				</control>
 				<control type="scrollbar" id="60">
 					<posx>1140</posx>
 					<posy>560</posy>
