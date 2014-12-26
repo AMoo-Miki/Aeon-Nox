@@ -457,6 +457,46 @@
 					<include>HiddenObject</include>
 				</control>
 				<control type="textbox" id="400">
+					<description>Plot - Narrow for DiscArt</description>
+					<left>0</left>
+					<top>560</top>
+					<width>756</width>
+					<height>402</height>
+					<font>font15_textbox</font>
+					<align>left</align>
+					<label>$VAR[VideoInfoPlotVar]</label>
+					<textcolor>white</textcolor>
+					<pagecontrol>60001</pagecontrol>
+					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+					<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(4003)">Conditional</animation>
+					<visible>!Control.IsVisible(50) + !IsEmpty(ListItem.Art(discart))</visible>
+				</control>
+				<control type="image">
+					<left>800</left>
+					<top>600</top>
+					<width>320</width>
+					<height>320</height>
+					<aspect>keep</aspect>
+					<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+					<visible>!Control.IsVisible(50) + !IsEmpty(ListItem.Art(discart))</visible>
+				</control>
+				<control type="scrollbar" id="60001">
+					<left>760</left>
+					<top>552</top>
+					<width>14</width>
+					<height>418</height>
+					<onup>9000</onup>
+					<ondown>noop</ondown>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<texturesliderbackground>-</texturesliderbackground>
+					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<visible>!Control.IsVisible(50)</visible>
+				</control>
+				<control type="textbox" id="401">
 					<description>Plot</description>
 					<left>0</left>
 					<top>560</top>
@@ -468,8 +508,8 @@
 					<textcolor>white</textcolor>
 					<pagecontrol>60</pagecontrol>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
-					<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">Conditional</animation>
-					<visible>!Control.IsVisible(50)</visible>
+					<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(4003)">Conditional</animation>
+					<visible>!Control.IsVisible(50) + IsEmpty(ListItem.Art(discart))</visible>
 				</control>
 				<control type="button" id="4003">
 					<left>0</left>
@@ -488,7 +528,7 @@
 				</control>
 				<control type="scrollbar" id="60">
 					<left>1136</left>
-					<top>550</top>
+					<top>552</top>
 					<width>14</width>
 					<height>418</height>
 					<onup>9000</onup>
