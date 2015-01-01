@@ -56,7 +56,7 @@
 					<width>650</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<include>VisibleFadeEffect</include>
-					<visible>!Container.Content(tvshows) + !IsEmpty(ListItem.Genre)</visible><visible>!Container.Content(tvshows) + !IsEmpty(ListItem.Genre)</visible>
+					<visible>!Container.Content(tvshows) + !IsEmpty(ListItem.Genre)</visible>
 				</control>
 				<!-- Genre -->
 				<control type="button">
