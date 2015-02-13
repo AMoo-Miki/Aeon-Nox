@@ -7,8 +7,8 @@
 		<control type="group">
 			<animation effect="slide" start="-729,0" end="0,0" time="500" tween="quadratic">WindowOpen</animation>
 			<animation effect="slide" end="-729,0" time="500" tween="quadratic">WindowClose</animation>
-			<animation effect="slide" start="-729,0" end="0,0" time="500" tween="quadratic" condition="![Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(fullscreenvideo)]">Conditional</animation>
-			<animation effect="slide" end="-729,0" time="500" tween="quadratic" condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(fullscreenvideo)">Conditional</animation>
+			<animation effect="slide" start="-729,0" end="0,0" time="500" tween="quadratic" condition="![Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]">Conditional</animation>
+			<animation effect="slide" end="-729,0" time="500" tween="quadratic" condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">Conditional</animation>
 			<control type="image">
 				<width>729</width>
 				<height>1080</height>
@@ -19,8 +19,8 @@
 		<control type="group">
 			<animation effect="slide" start="1242,0" end="0,0" time="500" tween="quadratic">WindowOpen</animation>
 			<animation effect="slide" end="1242,0" time="500" tween="quadratic">WindowClose</animation>
-			<animation effect="slide" start="1242,0" end="0,0" time="500" tween="quadratic" condition="![Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(fullscreenvideo)]">Conditional</animation>
-			<animation effect="slide" end="1242,0" time="500" tween="quadratic" condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(fullscreenvideo)">Conditional</animation>
+			<animation effect="slide" start="1242,0" end="0,0" time="500" tween="quadratic" condition="![Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]">Conditional</animation>
+			<animation effect="slide" end="1242,0" time="500" tween="quadratic" condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">Conditional</animation>
 			<left>729</left>
 			<control type="image">
 				<width>1192</width>
@@ -727,18 +727,21 @@
 							<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 							<bordersize>2</bordersize>
 						</control>
-						<control type="image">
-							<width>300</width>
-							<height>420</height>
-							<texture>thumbs/poster_black.png</texture>
+                        <control type="image">
+                            <top>322</top>
+                            <width>300</width>
+                            <height>98</height>
+                            <texture>black.png</texture>
+                            <colordiffuse>88ffffff</colordiffuse>
 							<bordersize>2</bordersize>
-						</control>
+                        </control>
 						<control type="textbox">
 							<left>10</left>
-							<top>320</top>
+							<top>325</top>
 							<width>280</width>
-							<height>100</height>
-							<font>font15</font>
+							<height>87</height>
+							<align>center</align>
+							<font>font14</font>
 							<textcolor>grey</textcolor>
 							<shadowcolor>shadow</shadowcolor>
 							<selectedcolor>selected</selectedcolor>
@@ -759,21 +762,25 @@
 								<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
 								<bordersize>8</bordersize>
 							</control>
-							<control type="image">
-								<width>300</width>
-								<height>420</height>
-								<texture>thumbs/poster_black.png</texture>
+                            <control type="image">
+                                <top>316</top>
+                                <width>300</width>
+                                <height>104</height>
+                                <texture>black.png</texture>
+                                <colordiffuse>88ffffff</colordiffuse>
 								<bordersize>8</bordersize>
-							</control>
+                            </control>
 							<control type="textbox">
 								<left>10</left>
-								<top>320</top>
+								<top>325</top>
 								<width>280</width>
-								<height>100</height>
-								<font>font15</font>
+								<height>87</height>
+								<align>center</align>
+								<font>font14</font>
 								<selectedcolor>selected</selectedcolor>
 								<shadowcolor>shadow</shadowcolor>
 								<label>$INFO[ListItem.Label]</label>
+								<autoscroll time="2000" delay="400" repeat="3000">true</autoscroll>
 								<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
 							</control>
 						</control>
