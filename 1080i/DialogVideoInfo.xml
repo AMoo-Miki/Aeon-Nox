@@ -727,14 +727,14 @@
 							<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 							<bordersize>2</bordersize>
 						</control>
-                        <control type="image">
-                            <top>322</top>
-                            <width>300</width>
-                            <height>98</height>
-                            <texture>black.png</texture>
-                            <colordiffuse>88ffffff</colordiffuse>
-							<bordersize>2</bordersize>
-                        </control>
+			                        <control type="image">
+			                            <top>322</top>
+			                            <width>300</width>
+			                            <height>98</height>
+			                            <texture>black.png</texture>
+			                            <colordiffuse>88ffffff</colordiffuse>
+						    <bordersize>2</bordersize>
+			                        </control>
 						<control type="textbox">
 							<left>10</left>
 							<top>325</top>
@@ -762,14 +762,14 @@
 								<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
 								<bordersize>8</bordersize>
 							</control>
-                            <control type="image">
-                                <top>316</top>
-                                <width>300</width>
-                                <height>104</height>
-                                <texture>black.png</texture>
-                                <colordiffuse>88ffffff</colordiffuse>
+							<control type="image">
+								<top>316</top>
+								<width>300</width>
+								<height>104</height>
+								<texture>black.png</texture>
+								<colordiffuse>88ffffff</colordiffuse>
 								<bordersize>8</bordersize>
-                            </control>
+							</control>
 							<control type="textbox">
 								<left>10</left>
 								<top>325</top>
