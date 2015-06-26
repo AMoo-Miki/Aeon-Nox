@@ -727,14 +727,14 @@
 							<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 							<bordersize>2</bordersize>
 						</control>
-			                        <control type="image">
-			                            <top>322</top>
-			                            <width>300</width>
-			                            <height>98</height>
-			                            <texture>black.png</texture>
-			                            <colordiffuse>88ffffff</colordiffuse>
-						    <bordersize>2</bordersize>
-			                        </control>
+                        <control type="image">
+                            <top>322</top>
+                            <width>300</width>
+                            <height>98</height>
+                            <texture>black.png</texture>
+                            <colordiffuse>88ffffff</colordiffuse>
+							<bordersize>2</bordersize>
+                        </control>
 						<control type="label">
 							<left>10</left>
 							<top>325</top>
