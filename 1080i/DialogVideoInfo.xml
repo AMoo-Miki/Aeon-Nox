@@ -455,7 +455,65 @@
 					<description>Plot</description>
 					<include>HiddenObject</include>
 				</control>
+                <!-- End of DiscArt -->
 				<control type="textbox" id="400">
+					<description>Narrow Plot to accomodate DiscArt</description>
+					<left>0</left>
+					<top>560</top>
+					<width>756</width>
+					<height>402</height>
+					<font>font15_textbox</font>
+					<align>left</align>
+					<label>$VAR[VideoInfoPlotVar]</label>
+					<textcolor>white</textcolor>
+					<pagecontrol>60001</pagecontrol>
+					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+					<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60003)">Conditional</animation>
+					<visible>!Control.IsVisible(50) + !IsEmpty(ListItem.Art(discart))</visible>
+				</control>
+				<control type="image">
+					<left>800</left>
+					<top>559</top>
+					<width>320</width>
+					<height>320</height>
+					<aspect>keep</aspect>
+					<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+					<visible>!Control.IsVisible(50) + !IsEmpty(ListItem.Art(discart))</visible>
+				</control>
+				<control type="button" id="60003">
+					<left>0</left>
+					<top>560</top>
+					<width>1132</width>
+					<height>400</height>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onup condition="Control.IsVisible(60001)">PageUp(60001)</onup>
+					<onup condition="!Control.IsVisible(60001)">9000</onup>
+					<ondown condition="Control.IsVisible(60001)">PageDown(60001)</ondown>
+					<ondown condition="!Control.IsVisible(60001)">9000</ondown>
+					<onclick>Skin.ToggleSetting(VideoInfoPlotToggle)</onclick>
+				</control>
+				<control type="scrollbar" id="60001">
+					<left>760</left>
+					<top>554</top>
+					<width>14</width>
+					<height>410</height>
+					<onup>9000</onup>
+					<ondown>noop</ondown>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<texturesliderbackground>-</texturesliderbackground>
+					<texturesliderbar border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+					<visible>!Control.IsVisible(50) + !IsEmpty(ListItem.Art(discart))</visible>
+					<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60003)">Conditional</animation>
+				</control>
+                <!-- End of DiscArt -->
+				<control type="textbox" id="401">
 					<description>Plot</description>
 					<left>0</left>
 					<top>560</top>
@@ -468,7 +526,7 @@
 					<pagecontrol>60</pagecontrol>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 					<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(4003)">Conditional</animation>
-					<visible>!Control.IsVisible(50)</visible>
+					<visible>!Control.IsVisible(50) + IsEmpty(ListItem.Art(discart))</visible>
 				</control>
 				<control type="button" id="4003">
 					<left>0</left>
@@ -487,9 +545,9 @@
 				</control>
 				<control type="scrollbar" id="60">
 					<left>1136</left>
-					<top>550</top>
+					<top>554</top>
 					<width>14</width>
-					<height>418</height>
+					<height>410</height>
 					<onup>9000</onup>
 					<ondown>noop</ondown>
 					<onleft>9000</onleft>
@@ -499,7 +557,7 @@
 					<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<visible>!Control.IsVisible(50)</visible>
+					<visible>!Control.IsVisible(50) + IsEmpty(ListItem.Art(discart))</visible>
 					<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(4003)">Conditional</animation>
 				</control>
 				<control type="group">
@@ -1540,7 +1598,8 @@
 					<onright>9000</onright>
 					<onup>300</onup>
 					<align>left</align>
-					<ondown condition="!Control.IsVisible(50)">4003</ondown>
+					<ondown condition="!Control.IsVisible(50) + IsEmpty(ListItem.Art(discart))">4003</ondown>
+					<ondown condition="!Control.IsVisible(50) + !IsEmpty(ListItem.Art(discart))">60003</ondown>
 					<ondown condition="Control.IsVisible(50)">9001</ondown>
 					<orientation>horizontal</orientation>
 					<control type="togglebutton" id="8">
