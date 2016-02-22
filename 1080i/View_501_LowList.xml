@@ -51,12 +51,53 @@
 					<include>VisibleFadeEffect</include>
 					<visible>!IsEmpty(ListItem.Studio) + Container.Content(episodes)</visible>
 				</control>
+                <!-- Genre: Non-TV Shows -->
 				<control type="button">
 					<label>[COLOR labelheader]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
 					<width>650</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<include>VisibleFadeEffect</include>
-					<visible>!IsEmpty(ListItem.Genre)</visible>
+					<visible>!Container.Content(tvshows) + !IsEmpty(ListItem.Genre)</visible>
+				</control>
+				<!-- Genre: TV Shows -->
+				<control type="button">
+					<label>[COLOR labelheader]$LOCALIZE[515]:[/COLOR] $INFO[ListItem.Genre]</label>
+					<width>650</width>
+					<include>LowTVInfoPanelButtonsValues</include>
+					<include>VisibleFadeEffect</include>
+					<visible>Container.Content(tvshows) + !IsEmpty(ListItem.Genre)</visible>
+				</control>
+				<!-- Latest Episode -->
+				<control type="button">
+					<label>[COLOR labelheader]$LOCALIZE[31011]:[/COLOR] $INFO[Window(Home).Property(NextAired.LatestNumber)] - $INFO[Window(Home).Property(NextAired.LatestDay)]</label>
+					<width>650</width>
+					<include>LowTVInfoPanelButtonsValues</include>
+					<include>VisibleFadeEffect</include>
+					<visible>Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.LatestDate))</visible>
+				</control>
+				<!-- Status -->
+				<control type="button">
+					<label>[COLOR labelheader]$LOCALIZE[126]:[/COLOR] $INFO[Window(Home).Property(NextAired.Status)]</label>
+					<width>650</width>
+					<include>LowTVInfoPanelButtonsValues</include>
+					<include>VisibleFadeEffect</include>
+					<visible>Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.StatusID)) + !StringCompare(Window(Home).Property(NextAired.StatusID),-1)</visible>
+				</control>
+				<!-- Next Episode -->
+				<control type="button">
+					<label>[COLOR labelheader]$LOCALIZE[31010]:[/COLOR] $INFO[Window(Home).Property(NextAired.NextNumber)] - $INFO[Window(Home).Property(NextAired.NextDay)]</label>
+					<width>650</width>
+					<include>LowTVInfoPanelButtonsValues</include>
+					<include>VisibleFadeEffect</include>
+					<visible>Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.NextDate)) + !IsEmpty(Window(Home).Property(NextAired.NextNumber))</visible>
+				</control>
+				<!-- Next Episode, date only -->
+				<control type="button">
+					<label>[COLOR labelheader]$LOCALIZE[31010]:[/COLOR] $INFO[Window(Home).Property(NextAired.NextDay)]</label>
+					<width>650</width>
+					<include>LowTVInfoPanelButtonsValues</include>
+					<include>VisibleFadeEffect</include>
+					<visible>Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.NextDate)) + IsEmpty(Window(Home).Property(NextAired.NextNumber))</visible>
 				</control>
 				<control type="button">
 					<label>[COLOR labelheader]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
@@ -115,6 +156,7 @@
 			<control type="group">
 				<left>1270</left>
 				<top>652</top>
+				<visible>0</visible>
 				<visible>!Skin.HasSetting(nohighlist) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
@@ -148,6 +190,7 @@
 			<control type="group">
 				<left>1270</left>
 				<top>822</top>
+				<visible>0</visible>
 				<visible>Skin.HasSetting(nohighlist) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
