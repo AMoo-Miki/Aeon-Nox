@@ -716,7 +716,32 @@
 							<onclick>SetProperty(TextViewerContent,$ESCINFO[ListItem.Tagline,[I],[/I][CR]]$ESCINFO[ListItem.Plot]$ESCINFO[ListItem.PlotOutline,[CR]---[CR]],Home)</onclick>
 							<onclick>ActivateWindow(1132)</onclick>
 						</control>
+                        <control type="image">
+                            <left>825</left>
+                            <top>50</top>
+                            <width>320</width>
+                            <height>320</height>
+                            <aspect>keep</aspect>
+                            <texture background="true">$INFO[ListItem.Art(discart)]</texture>
+                            <visible>!IsEmpty(ListItem.Art(discart))</visible>
+                        </control>
 						<control type="textbox" id="4">
+							<description>Plot</description>
+							<left>36</left>
+							<top>10</top>
+							<width>756</width>
+							<height>400</height>
+							<font>font15_textbox</font>
+							<align>left</align>
+							<label>$INFO[ListItem.Plot]</label>
+							<textcolor>white</textcolor>
+							<pagecontrol>-</pagecontrol>
+							<autoscroll time="3000" delay="6000" repeat="6000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+							<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+							<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(900171)">Conditional</animation>
+                            <visible>!IsEmpty(ListItem.Art(discart))</visible>
+						</control>
+						<control type="textbox" id="40000">
 							<description>Plot</description>
 							<left>36</left>
 							<top>10</top>
@@ -730,6 +755,7 @@
 							<autoscroll time="3000" delay="6000" repeat="6000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 							<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
 							<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(900171)">Conditional</animation>
+                            <visible>IsEmpty(ListItem.Art(discart))</visible>
 						</control>
 					</control>
 					<include condition="!System.HasAddon(script.extendedinfo)">DefaultActorList</include>
