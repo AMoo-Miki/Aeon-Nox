@@ -256,8 +256,7 @@
 					<left>176.5</left>
 					<colordiffuse>grey2</colordiffuse>
 					<include>MediaFlagVars</include>
-					<texture>$VAR[ListItemAudioCodecPlusFilenameFlags,flags/audio/,.png]</texture>
-					<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+					<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
 					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="image">
