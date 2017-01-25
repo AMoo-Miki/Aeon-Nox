@@ -257,6 +257,7 @@
 					<colordiffuse>grey2</colordiffuse>
 					<include>MediaFlagVars</include>
 					<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
+					<visible>Container.Content(movies)</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="image">
@@ -331,6 +332,7 @@
 					</control>
 					<control type="image">
 						<left>339</left>
+						<top>-5</top>
 						<bordersize>2</bordersize>
 						<colordiffuse>$VAR[StudioFlagColorVar]</colordiffuse>
 						<include>MediaFlagVars</include>
