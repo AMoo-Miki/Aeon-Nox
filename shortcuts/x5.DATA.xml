@@ -1,6 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
 	<shortcut>
+		<defaultID>24001</defaultID>
+		<label>24001</label>
+		<label2 />
+		<icon />
+		<thumb />
+		<action>ActivateWindow(AddonBrowser)</action>
+	</shortcut>
+	<shortcut>
 		<defaultID>130</defaultID>
 		<label>130</label>
 		<label2 />

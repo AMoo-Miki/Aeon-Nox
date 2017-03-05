@@ -125,9 +125,9 @@
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),6)">$INFO[Window(Home).Property(RandomAddon.Count),[COLOR grey]$LOCALIZE[20161] $LOCALIZE[24001]: [/COLOR],[COLOR grey]  |  [/COLOR]]$INFO[Window(home).Property(favourite.count), [COLOR grey]$LOCALIZE[1036]:[/COLOR] ]</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),7)">$INFO[Window(Home).Property(MusicVideos.Count),[COLOR grey]$LOCALIZE[20389]:[/COLOR] ]$INFO[Window(Home).Property(MusicVideos.Watched),[COLOR grey]  |  $LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(MusicVideos.UnWatched),[COLOR grey]  |  $LOCALIZE[16101]:[/COLOR] ]</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),8)">$INFO[System.memory(used.percent),[COLOR grey]$LOCALIZE[31309][/COLOR] ]$INFO[System.CPUUsage,[COLOR grey]  |  $LOCALIZE[13271][/COLOR] ]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),9)">$INFO[Window(Home).Property(PlaylistCount),[COLOR grey]$LOCALIZE[20342]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistWatched),[COLOR grey]  |  $LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistUnWatched),[COLOR grey]  |  $LOCALIZE[16101]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistInProgress),[COLOR grey]  |  $LOCALIZE[575]:[/COLOR] ]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),9)">$INFO[Window(Home).Property(PlaylistCount),[COLOR grey]$LOCALIZE[20342]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistWatched),[COLOR grey]  |  $LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistUnWatched),[COLOR grey]  |  $LOCALIZE[16101]:[/COLOR] ]</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),10)">$INFO[Window(Home).Property(PlaylistTVShowCount),[COLOR grey]$LOCALIZE[20343]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistEpisodes),[COLOR grey]  |  $LOCALIZE[20360]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistEpisodesUnWatched),[COLOR grey]  |  $LOCALIZE[16101]:[/COLOR] ]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),11)">$INFO[Window(Home).Property(PlaylistCount),[COLOR grey]$LOCALIZE[20389]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistWatched),[COLOR grey]  |  $LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistUnWatched),[COLOR grey]  |  $LOCALIZE[16101]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistInProgress),[COLOR grey]  |  $LOCALIZE[575]:[/COLOR] ]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),11)">$INFO[Window(Home).Property(PlaylistCount),[COLOR grey]$LOCALIZE[20389]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistWatched),[COLOR grey]  |  $LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(PlaylistUnWatched),[COLOR grey]  |  $LOCALIZE[16101]:[/COLOR] ]</value>
 	</variable>
 	<variable name="MusicOSDRepeatButtonVar">
 		<value condition="[!Playlist.IsRepeat + !Playlist.IsRepeatOne] + !Control.HasFocus(707)">osd/buttons/OSDRepeatNF.png</value>
@@ -497,9 +497,9 @@
 		<value>5 $LOCALIZE[31025]</value>
 	</variable>
 	<variable name="RatingFlagVar">
-		<value condition="String.Contains(ListItem.mpaa,US:G) | String.Contains(ListItem.mpaa,USA:G) | String.Contains(ListItem.mpaa,Rated G)">flags/mpaa/G.png</value>
+		<value condition="String.Contains(ListItem.mpaa,US:G) | String.Contains(ListItem.mpaa,USA:G) | String.Contains(ListItem.mpaa,Rated G) | StringCompare(ListItem.mpaa,Rated TV-G) | StringCompare(ListItem.mpaa,Rated TV-Y) | StringCompare(ListItem.mpaa,Rated TV-Y7)">flags/mpaa/G.png</value>
 		<value condition="String.Contains(ListItem.mpaa,PG-13)">flags/mpaa/PG-13.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Rated PG) | String.IsEqual(ListItem.Mpaa,PG)">flags/mpaa/PG.png</value>
+		<value condition="String.Contains(ListItem.mpaa,Rated PG) | String.IsEqual(ListItem.mpaa,PG) | StringCompare(ListItem.mpaa,Rated TV-PG)">flags/mpaa/PG.png</value>
 		<value condition="String.Contains(ListItem.mpaa,US:R) | String.Contains(ListItem.mpaa,USA:R) | String.Contains(ListItem.mpaa,Rated R) | String.IsEqual(ListItem.mpaa,R)">flags/mpaa/R.png</value>
 		<value condition="String.Contains(ListItem.mpaa,US:NC-17)| String.Contains(ListItem.mpaa,USA:NC-17)| String.Contains(ListItem.mpaa,Rated NC-17)">flags/mpaa/NC-17.png</value>
 		<value condition="String.Contains(ListItem.mpaa,UK:U)">flags/mpaa/BBFC_U_Certificate_UK.png</value>
@@ -538,9 +538,9 @@
 		<value>$INFO[ListItem.MPAA,flags/mpaa/,.png]</value>
 	</variable>
 	<variable name="VideoRatingFlagVar">
-		<value condition="String.Contains(VideoPlayer.mpaa,US:G) | String.Contains(VideoPlayer.mpaa,USA:G) | String.Contains(VideoPlayer.mpaa,Rated G)">flags/mpaa/G.png</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,US:G) | String.Contains(VideoPlayer.mpaa,USA:G) | String.Contains(VideoPlayer.mpaa,Rated G) | StringCompare(ListItem.mpaa,Rated TV-G) | StringCompare(ListItem.mpaa,Rated TV-Y) | StringCompare(ListItem.mpaa,Rated TV-Y7)">flags/mpaa/G.png</value>
 		<value condition="String.Contains(VideoPlayer.mpaa,PG-13)">flags/mpaa/PG-13.png</value>
-		<value condition="String.Contains(VideoPlayer.mpaa,Rated PG) | String.IsEqual(VideoPlayer.Mpaa,PG)">flags/mpaa/PG.png</value>
+		<value condition="String.Contains(VideoPlayer.mpaa,Rated PG) | String.IsEqual(VideoPlayer.mpaa,PG) | StringCompare(ListItem.mpaa,Rated TV-PG)">flags/mpaa/PG.png</value>
 		<value condition="String.Contains(VideoPlayer.mpaa,US:R) | String.Contains(VideoPlayer.mpaa,USA:R) | String.Contains(VideoPlayer.mpaa,Rated R) | String.IsEqual(VideoPlayer.mpaa,R)">flags/mpaa/R.png</value>
 		<value condition="String.Contains(VideoPlayer.mpaa,US:NC-17)| String.Contains(VideoPlayer.mpaa,USA:NC-17)| String.Contains(VideoPlayer.mpaa,Rated NC-17)">flags/mpaa/NC-17.png</value>
 		<value condition="String.Contains(VideoPlayer.mpaa,UK:U)">flags/mpaa/BBFC_U_Certificate_UK.png</value>

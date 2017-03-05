@@ -520,7 +520,30 @@
 							<onclick>SetProperty(TextViewerContent,$ESCINFO[ListItem.Tagline,[I],[/I][CR]]$ESCINFO[ListItem.Plot]$ESCINFO[ListItem.PlotOutline,[CR]---[CR]],Home)</onclick>
 							<onclick>ActivateWindow(1132)</onclick>
 						</control>
+						<control type="image">
+							<right>36</right>
+							<top>50</top>
+							<width>320</width>
+							<height>320</height>
+							<aspect>keep</aspect>
+							<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+							<visible>!IsEmpty(ListItem.Art(discart))</visible>
+						</control>
 						<control type="textbox" id="4">
+							<description>Plot</description>
+							<left>36</left>
+							<right>389</right>
+							<top>10</top>
+							<height>400</height>
+							<font>font15_textbox2</font>
+							<label>$INFO[ListItem.Plot]</label>
+							<textcolor>white</textcolor>
+							<pagecontrol />
+							<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
+							<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(900171)">Conditional</animation>
+							<visible>!IsEmpty(ListItem.Art(discart))</visible>
+						</control>
+						<control type="textbox" id="40000">
 							<description>Plot</description>
 							<left>36</left>
 							<right>36</right>
@@ -532,6 +555,7 @@
 							<pagecontrol />
 							<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
 							<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(900171)">Conditional</animation>
+							<visible>IsEmpty(ListItem.Art(discart))</visible>
 						</control>
 					</control>
 					<include content="ExtendedInfoListLayout">
