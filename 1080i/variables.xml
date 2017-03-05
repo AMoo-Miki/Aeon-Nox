@@ -513,7 +513,7 @@
 		<value>5 $LOCALIZE[31025]</value>
 	</variable>
 	<variable name="RatingFlagVar">
-		<value condition="SubString(ListItem.mpaa,US:G) | SubString(ListItem.mpaa,USA:G) | SubString(ListItem.mpaa,Rated G)">flags/mpaa/G.png</value>
+		<value condition="SubString(ListItem.mpaa,US:G) | SubString(ListItem.mpaa,USA:G) | SubString(ListItem.mpaa,Rated G) | StringCompare(ListItem.mpaa,Rated TV-G | StringCompare(ListItem.mpaa,Rated TV-Y) | StringCompare(ListItem.mpaa,Rated TV-Y7">flags/mpaa/G.png</value>
 		<value condition="SubString(ListItem.mpaa,PG-13)">flags/mpaa/PG-13.png</value>
 		<value condition="Substring(ListItem.mpaa,Rated PG) | StringCompare(ListItem.mpaa,PG) | StringCompare(ListItem.mpaa,Rated TV-PG)">flags/mpaa/PG.png</value>
 		<value condition="SubString(ListItem.mpaa,US:R) | SubString(ListItem.mpaa,USA:R) | SubString(ListItem.mpaa,Rated R) | StringCompare(ListItem.mpaa,R)">flags/mpaa/R.png</value>
