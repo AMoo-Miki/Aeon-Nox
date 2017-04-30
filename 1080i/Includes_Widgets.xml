@@ -30,6 +30,7 @@
 				<param name="contentTarget" value="" />
 				<param name="contentPath" value="special://skin/extras/playlists/recommendedmovies.xsp" />
 			</include>
+			<!--
 			<include content="HomeWidgetItem">
 				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),2)" />
 				<param name="animationStart" value="180" />
@@ -96,6 +97,7 @@
 				<param name="contentTarget" value="videos" />
 				<param name="contentPath" value="special://skin/extras/Top250.xsp" />
 			</include>
+			-->
 		</control>
 	</include>
 	<include name="HomeWidgetItem">
