@@ -437,6 +437,7 @@
 							</control>
 							<control type="label">
 								<left>-18</left>
+								<top>2</top>
 								<width>100</width>
 								<height>120</height>
 								<font>font12_title</font>
@@ -519,6 +520,7 @@
 							</control>
 							<control type="label">
 								<left>-18</left>
+								<top>2</top>
 								<width>100</width>
 								<height>120</height>
 								<font>font12_title</font>
@@ -594,6 +596,7 @@
 							</control>
 							<control type="label">
 								<left>-18</left>
+								<top>2</top>
 								<width>100</width>
 								<height>120</height>
 								<font>font12_title</font>
@@ -675,6 +678,7 @@
 							</control>
 							<control type="label">
 								<left>-18</left>
+								<top>2</top>
 								<width>100</width>
 								<height>120</height>
 								<font>font12_title</font>
@@ -2394,6 +2398,7 @@
 							</control>
 							<control type="label">
 								<left>32</left>
+								<top>2</top>
 								<width>100</width>
 								<height>62</height>
 								<font>font12_title</font>
@@ -2467,6 +2472,7 @@
 							</control>
 							<control type="label">
 								<left>32</left>
+								<top>2</top>
 								<width>100</width>
 								<height>62</height>
 								<font>font12_title</font>

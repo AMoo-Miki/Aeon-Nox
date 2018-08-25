@@ -344,6 +344,7 @@
 							</control>
 							<control type="label">
 								<left>-18</left>
+								<top>2</top>
 								<width>100</width>
 								<height>68</height>
 								<font>font12_title</font>
@@ -419,6 +420,7 @@
 							</control>
 							<control type="label">
 								<left>-18</left>
+								<top>2</top>
 								<width>100</width>
 								<height>68</height>
 								<font>font12_title</font>
@@ -555,6 +557,7 @@
 							</control>
 							<control type="label">
 								<left>-18</left>
+								<top>2</top>
 								<width>100</width>
 								<height>68</height>
 								<font>font12_title</font>
@@ -619,6 +622,7 @@
 							</control>
 							<control type="label">
 								<left>-18</left>
+								<top>2</top>
 								<width>100</width>
 								<height>68</height>
 								<font>font12_title</font>
