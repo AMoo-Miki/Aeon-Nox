@@ -504,7 +504,7 @@
 					<label>$INFO[VideoPlayer.Plot]</label>
 					<font>font15_textbox</font>
 					<autoscroll delay="6000" time="3000" repeat="6000">true</autoscroll>
-					<visible>[IsEmpty(VideoPlayer.PlotOutline) | String.IsEqual(VideoPlayer.PlotOutline,N/A)] + !Skin.HasSetting(Enable.LiveTVFullPlot)</visible>
+					<visible>[String.IsEmpty(VideoPlayer.PlotOutline) | String.IsEqual(VideoPlayer.PlotOutline,N/A)] + !Skin.HasSetting(Enable.LiveTVFullPlot)</visible>
 				</control>
 			</control>
 			<!-- NEXT playing on channel -->
@@ -587,7 +587,7 @@
 					<label>$INFO[VideoPlayer.NextPlot]</label>
 					<font>font15_textbox</font>
 					<autoscroll delay="6000" time="3000" repeat="6000">true</autoscroll>
-					<visible>[IsEmpty(VideoPlayer.NextPlotOutline) | String.IsEqual(VideoPlayer.NextPlotOutline,N/A)] + !Skin.HasSetting(Enable.LiveTVFullPlot)</visible>
+					<visible>[String.IsEmpty(VideoPlayer.NextPlotOutline) | String.IsEqual(VideoPlayer.NextPlotOutline,N/A)] + !Skin.HasSetting(Enable.LiveTVFullPlot)</visible>
 				</control>
 			</control>
 		</control>

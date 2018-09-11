@@ -162,7 +162,7 @@
 				<control type="label">
 					<description>CPU Text</description>
 					<left>630</left>
-					<top>20</top>
+					<top>22</top>
 					<width>240</width>
 					<height>24</height>
 					<label>$LOCALIZE[13271]</label>
@@ -182,7 +182,7 @@
 				<control type="label">
 					<description>Memory Text</description>
 					<left>510</left>
-					<top>70</top>
+					<top>72</top>
 					<width>360</width>
 					<height>24</height>
 					<label>$LOCALIZE[31309]</label>

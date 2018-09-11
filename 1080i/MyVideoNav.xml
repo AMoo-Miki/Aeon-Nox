@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>true</allowoverlay>
-	<views>50,51,52,53,55,56,57,58,59,500,501,502,503,510</views>
+	<views>50,51,52,53,55,56,57,58,59,500,5011,5012,502,503,510</views>
 	<menucontrol>9051</menucontrol>
 	<onload>SetProperty(Window.HasSettings,True,home)</onload>
 	<onload>ClearProperty(MediaMenu,Home)</onload>
@@ -74,7 +74,7 @@
 			<include>VideoWall</include>
 			<!-- view id = 500 -->
 			<include>VideoLowList</include>
-			<!-- view id = 501 -->
+			<!-- view id = 5011, 5012 -->
 			<include>VideoEpisode</include>
 			<!-- view id = 502 -->
 			<include>View_503_Wall</include>
@@ -172,7 +172,7 @@
 				<animation effect="slide" start="0" end="60" time="720" tween="cubic" easing="inout" condition="Control.IsVisible(55)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="80,15" time="720" tween="cubic" easing="inout" condition="Control.IsVisible(56)">Conditional</animation>
 				<animation effect="slide" tween="cubic" time="720" start="0,806" end="0,0">VisibleChange</animation>
-				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(files) | Container.Content(musicvideos)]</visible>
+				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(files) | Container.Content(musicvideos)</visible>
 				<control type="group">
 					<left>90</left>
 					<top>1010</top>
@@ -228,7 +228,7 @@
 					<control type="group">
 						<left>-175</left>
 						<width>160</width>
-						<visible>!Skin.HasSetting(Disable.NextAired) + IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
+						<visible>!Skin.HasSetting(Disable.NextAired) + String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 						<control type="label">
 							<top>2</top>
 							<width>200</width>
@@ -328,9 +328,24 @@
 					<textwidth>255</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>$LOCALIZE[31093]</label>
-					<onclick>Skin.ToggleSetting(nohighlist)</onclick>
-					<onclick>ReloadSkin()</onclick>
-					<visible>Control.IsVisible(501)</visible>
+					<onclick>Skin.ToggleSetting($INFO[Container.Content,,.nohighlist])</onclick>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick>SetFocus(50)</onclick>
+					<onclick>Container.Refresh()</onclick>
+					<onclick>Container.SetViewMode(5012)</onclick>
+					<visible>Control.IsVisible(5011)</visible>
+				</control>
+				<control type="togglebutton" id="6054">
+					<description>LowList Toggle</description>
+					<textwidth>255</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>$LOCALIZE[31093]</label>
+					<onclick>Skin.ToggleSetting($INFO[Container.Content,,.nohighlist])</onclick>
+					<onclick>ClearProperty(MediaMenu,Home)</onclick>
+					<onclick>SetFocus(50)</onclick>
+					<onclick>Container.Refresh()</onclick>
+					<onclick>Container.SetViewMode(5011)</onclick>
+					<visible>Control.IsVisible(5012)</visible>
 				</control>
 				<control type="button" id="201">
 					<description>View options</description>

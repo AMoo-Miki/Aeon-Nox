@@ -13,7 +13,7 @@
 			<visible>String.IsEqual(Container(9000).ListItem.Property(BGType),7)</visible>
 		</control>
 		<control type="group">
-			<visible>String.IsEqual(Container(9000).ListItem.Thumb,7) | String.IsEqual(Container(9000).ListItem.Thumb,8) | String.IsEqual(Container(9000).ListItem.Property(BGType),5)</visible>
+			<visible>[String.IsEqual(Container(9000).ListItem.Thumb,7) | String.IsEqual(Container(9000).ListItem.Thumb,8) | String.IsEqual(Container(9000).ListItem.Property(BGType),5)] + ![ControlGroup(9003).HasFocus() | ControlGroup(9004).HasFocus()]</visible>
 			<animation effect="fade" time="600">WindowOpen</animation>
 			<animation effect="fade" time="600">VisibleChange</animation>
 			<width>1920</width>
