@@ -912,6 +912,19 @@ msgctxt "#31511"
 msgid "Channel Options"
 msgstr ""
 
+#: UpNext
+msgctxt "#31812"
+msgid "Next episode"
+msgstr ""
+
+msgctxt "#31813"
+msgid "Special"
+msgstr ""
+
+msgctxt "#31835"
+msgid "Continue watching"
+msgstr ""
+
 msgctxt "#31901"
 msgid "36 Hour Forecast"
 msgstr ""
