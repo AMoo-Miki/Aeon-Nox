@@ -50,8 +50,26 @@
 				<left>-80</left>
 				<width>620</width>
 				<height>350</height>
-				<include>Upnext_diffused_thumb</include>
+                <texture background="true" diffuse="upnext/icons/diffusor_square bold.png">$INFO[Window.Property(landscape)]</texture>
 				<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+			</control>
+			<control type="image">
+				<top>-20</top>
+				<left>-80</left>
+				<width>620</width>
+				<height>350</height>
+				<texture background="true" diffuse="upnext/icons/diffusor_square bold.png">$INFO[Window.Property(fanart)]</texture>
+				<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+				<visible>String.IsEmpty(Window.Property(landscape))</visible>
+			</control>
+			<control type="image">
+				<top>-20</top>
+				<left>-80</left>
+				<width>620</width>
+				<height>350</height>
+				<texture background="true" diffuse="upnext/icons/diffusor_square bold.png">$INFO[Window.Property(thumb)]</texture>
+				<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+				<visible>String.IsEmpty(Window.Property(landscape)) + String.IsEmpty(Window.Property(fanart))</visible>
 			</control>
 			<control type="image">
 				<top>120</top>
@@ -68,7 +86,6 @@
 			<height>55</height>
 			<aspectratio aligny="center" align="right">keep</aspectratio>
 			<texture colordiffuse="grey2" background="true" fallback="flags/mpaa/NR.png">$VAR[VideoRatingFlagVar]</texture>
-			<visible>!String.IsEmpty(VideoPlayer.Studio)</visible>
 		</control>
 		<control type="image">
 			<right>580</right>
@@ -133,10 +150,10 @@
 	</include>
 	<!-- workaround since colodiffuse condition=** didnt work in image control, when using diffuse image for var[thumb] -->
 	<include name="Upnext_diffused_thumb">
-		<texture background="true" colordiffuse="cc000000" diffuse="upnext/icons/diffusor_Square Bold.png">$INFO[Window.Property(thumb)]</texture>
+        <texture background="true" colordiffuse="cc000000" diffuse="upnext/icons/diffusor_square bold.png">$INFO[Window.Property(thumb)]</texture>
 	</include>
 	<include name="Upnext_No_diffused_thumb">
-		<texture background="true" diffuse="upnext/icons/diffusor_Square Bold.png">$INFO[Window.Property(thumb)]</texture>
+		<texture background="true" diffuse="upnext/icons/diffusor_square bold.png">$INFO[Window.Property(thumb)]</texture>
 	</include>
 	<include name="Upnext_diffused_clearlogo">
 		<texture background="true" fallback="$INFO[Window.Property(clearart)]" colordiffuse="cc000000">$INFO[Window.Property(clearlogo)]</texture>
