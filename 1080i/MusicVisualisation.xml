@@ -163,21 +163,10 @@
 					<label>$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]$INFO[MusicPlayer.Year, [COLOR labelheader][,][/COLOR]]</label>
 				</control>
 				<control type="label">
-					<left>1140</left>
-					<width>1180</width>
-					<height>40</height>
-					<font>font16</font>
-					<textoffsetx>15</textoffsetx>
-					<align>right</align>
-					<textcolor>grey</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<label>[COLOR=labelheader]$LOCALIZE[19031]:[/COLOR] $INFO[MusicPlayer.offset(1).TrackNumber,,. ]$INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title]</label>
-				</control>
-				<control type="label">
 					<description>Time Label</description>
 					<left>1140</left>
 					<height>30</height>
-					<width>1180</width>
+					<width>1164</width>
 					<align>right</align>
 					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=labelheader] / [/COLOR]]</label>
 					<font>font48</font>
@@ -186,8 +175,8 @@
 				</control>
 				<control type="grouplist">
 					<left>1140</left>
-					<height>90</height>
-					<width>1180</width>
+					<height>45</height>
+					<width>1163</width>
 					<align>right</align>
 					<usecontrolcoords>true</usecontrolcoords>
 					<orientation>horizontal</orientation>
@@ -226,6 +215,17 @@
 						<textcolor>grey</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
+				</control>
+				<control type="label">
+					<left>1140</left>
+					<width>1179</width>
+					<height>40</height>
+					<font>font13</font>
+					<textoffsetx>15</textoffsetx>
+					<align>right</align>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>[COLOR=labelheader]$LOCALIZE[19031]:[/COLOR] $INFO[MusicPlayer.offset(1).TrackNumber,,. ]$INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title]</label>
 				</control>
 			</control>
 			<control type="group">

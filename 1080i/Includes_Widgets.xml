@@ -832,6 +832,15 @@
 					<shadowcolor>black</shadowcolor>
 					<label>$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
 				</control>
+				<control type="image">
+					<left>-20</left>
+					<width>400</width>
+					<height>40</height>
+					<colordiffuse>FFFFD700</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="rating0.png">$INFO[MusicPlayer.UserRating,flags/rating/,.png]</texture>
+				</control>
+				<!--
 				<control type="label">
 					<left>90</left>
 					<width>1300</width>
@@ -839,8 +848,9 @@
 					<font>font15</font>
 					<textcolor>white2</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<label>$INFO[MusicPlayer.offset(1).TrackNumber,[COLOR=labelheader]$LOCALIZE[19031]:[/COLOR] ,. ]$INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title]</label>
+					<label>[COLOR=labelheader]$LOCALIZE[19031]:[/COLOR] $INFO[MusicPlayer.offset(1).TrackNumber,,. ]$INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title]</label>
 				</control>
+				-->
 				<control type="label">
 					<height>2</height>
 					<label />
