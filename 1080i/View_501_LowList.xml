@@ -54,11 +54,19 @@
 				<width>650</width>
 				<height>270</height>
 				<animation effect="slide" end="0,-170" time="120" condition="$EXP[ShowHighList]">Conditional</animation>
+				<!-- Director Tall Low-List -->
 				<control type="button">
 					<label>[COLOR labelheader]$LOCALIZE[31000]:[/COLOR][CR]$INFO[ListItem.Director]</label>
 					<width>650</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
-					<visible>!String.IsEmpty(ListItem.Director) + ( Container.Content(movies)| Container.Content(musicvideos) )</visible>
+					<visible>$EXP[ShowHighList] + !String.IsEmpty(ListItem.Director) + [ Container.Content(movies) | Container.Content(musicvideos) ]</visible>
+				</control>
+				<!-- Director Short Low-List -->
+				<control type="button">
+					<label>[COLOR labelheader]$LOCALIZE[31000]:[/COLOR] $INFO[ListItem.Director]</label>
+					<width>650</width>
+					<include>LowTVInfoPanelButtonsValues</include>
+					<visible>!String.IsEmpty(ListItem.Director) + [ [!$EXP[ShowHighList] + Container.Content(movies)] | Container.Content(musicvideos) ]</visible>
 				</control>
 				<control type="button">
 					<label>[COLOR labelheader]$LOCALIZE[558]:[/COLOR][CR]$INFO[ListItem.Album]</label>
@@ -88,21 +96,21 @@
 					<include>VisibleFadeAnimation</include>
 					<visible>!String.IsEmpty(ListItem.Studio) + Container.Content(musicvideos)</visible>
 				</control>
-				<!-- Genre: Non-TV Shows -->
+				<!-- Genre: Non-TV Shows or Movies-in-Tall  -->
 				<control type="button">
 					<label>[COLOR labelheader]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
 					<width>650</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<include>VisibleFadeAnimation</include>
-					<visible>!Container.Content(tvshows) + !String.IsEmpty(ListItem.Genre) + !Container.Content(episodes)</visible>
+					<visible>!Container.Content(tvshows) + !String.IsEmpty(ListItem.Genre) + !Container.Content(episodes) + [$EXP[ShowHighList] | !Container.Content(movies)]</visible>
 				</control>
-				<!-- Genre: TV Shows -->
+				<!-- Genre: TV Shows or Movies -->
 				<control type="button">
 					<label>[COLOR labelheader]$LOCALIZE[515]:[/COLOR] $INFO[ListItem.Genre]</label>
 					<width>650</width>
 					<include>LowTVInfoPanelButtonsValues</include>
 					<include>VisibleFadeAnimation</include>
-					<visible>!String.IsEmpty(ListItem.Genre) + Container.Content(tvshows)</visible>
+					<visible>!String.IsEmpty(ListItem.Genre) + [ Container.Content(tvshows) | [!$EXP[ShowHighList] + Container.Content(movies) ]]</visible>
 				</control>
 				<!-- Latest Episode -->
 				<control type="button">
@@ -141,7 +149,14 @@
 					<width>650</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<include>VisibleFadeAnimation</include>
-					<visible>!String.IsEmpty(ListItem.Duration) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					<visible>!String.IsEmpty(ListItem.Duration) + ![Container.Content(tvshows) | Container.Content(seasons)] + [$EXP[ShowHighList] | !Container.Content(movies)]</visible>
+				</control>
+				<control type="button">
+					<label>[COLOR labelheader]$LOCALIZE[2050]:[/COLOR] $INFO[ListItem.Duration(mins),, $LOCALIZE[12391]]</label>
+					<width>650</width>
+					<include>LowTVInfoPanelButtonsValues</include>
+					<include>VisibleFadeAnimation</include>
+					<visible>!String.IsEmpty(ListItem.Duration) + [!$EXP[ShowHighList] + Container.Content(movies)]</visible>
 				</control>
 			</control>
 			<control type="image">
@@ -178,6 +193,39 @@
 					<top>105</top>
 					<width>14</width>
 					<height>160</height>
+					<onup>PageUp(70)</onup>
+					<ondown>PageUp(70)</ondown>
+					<onleft>50</onleft>
+					<onright>SetProperty(MediaMenu,True,home)</onright>
+					<onright>SetFocus(9050)</onright>
+					<texturesliderbackground>scrollbar/texturesliderbackground3.png</texturesliderbackground>
+					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar3.png</texturesliderbar>
+					<texturesliderbarfocus border="1">scrollbar/texturesliderbar3.png</texturesliderbarfocus>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+				</control>
+			</control>
+			<control type="group">
+				<left>1270</left>
+				<top>733</top>
+				<visible>!$EXP[ShowHighList] + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+				<include>VisibleFadeAnimation</include>
+				<control type="textbox" id="70">
+					<label>$VAR[VideoPlotVar]</label>
+					<left>15</left>
+					<top>150</top>
+					<width>615</width>
+					<height>113</height>
+					<font>font14_textbox</font>
+					<pagecontrol>62</pagecontrol>
+					<include>ShowCaseInfoPanelButtonsValues</include>
+					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
+				</control>
+				<control type="scrollbar" id="62">
+					<left>636</left>
+					<top>150</top>
+					<width>14</width>
+					<height>115</height>
 					<onup>PageUp(70)</onup>
 					<ondown>PageUp(70)</ondown>
 					<onleft>50</onleft>
