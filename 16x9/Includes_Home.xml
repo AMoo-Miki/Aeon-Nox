@@ -3,9 +3,9 @@
 	<!-- Horizontal -->
 	<include name="HorizontalSubMenu">
 		<control type="fixedlist" id="9010">
-			<left>100</left>
+			<left>160</left>
 			<width>1720</width>
-			<height>50</height>
+			<height>40</height>
 			<onup>9000</onup>
 			<onback>9000</onback>
 			<ondown condition="Control.IsVisible(90020) + Skin.HasSetting(centermainmenu)">90020</ondown>
@@ -15,10 +15,9 @@
 			<focusposition>2</focusposition>
 			<movement>2</movement>
 			<orientation>horizontal</orientation>
-			<itemlayout height="87" width="344">
+			<itemlayout height="87" width="332">
 				<control type="label">
-					<top>2</top>
-					<width>344</width>
+					<width>332</width>
 					<height>41</height>
 					<font>font13_title</font>
 					<textcolor>$VAR[UnfocusedSubMenuColor]</textcolor>
@@ -27,18 +26,17 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</itemlayout>
-			<focusedlayout height="87" width="344">
+			<focusedlayout height="87" width="332">
 				<control type="group">
 					<visible>Control.HasFocus(9010)</visible>
 					<control type="image">
-						<top>1</top>
-						<width>344</width>
-						<height>44</height>
+						<top>3</top>
+						<width>332</width>
+						<height>37</height>
 						<texture colordiffuse="$VAR[HighlightBarColor]">listselect_fo.png</texture>
 					</control>
 					<control type="label">
-						<top>2</top>
-						<width>344</width>
+						<width>332</width>
 						<height>41</height>
 						<font>font13_title</font>
 						<textcolor>$VAR[FocusedSubMenuColor]</textcolor>
@@ -50,8 +48,7 @@
 				<control type="group">
 					<visible>!Control.HasFocus(9010)</visible>
 					<control type="label">
-						<top>2</top>
-						<width>344</width>
+						<width>332</width>
 						<height>41</height>
 						<font>font13_title</font>
 						<textcolor>$VAR[UnfocusedSubMenuColor]</textcolor>
@@ -66,8 +63,8 @@
 			</content>
 		</control>
 		<control type="button">
-			<left>50</left>
-			<top>10</top>
+			<left>130</left>
+			<top>6</top>
 			<width>30</width>
 			<height>30</height>
 			<texturefocus flipx="true" colordiffuse="white">arrowright.png</texturefocus>
@@ -77,7 +74,7 @@
 		</control>
 		<control type="button">
 			<left>1840</left>
-			<top>10</top>
+			<top>6</top>
 			<width>30</width>
 			<height>30</height>
 			<texturefocus colordiffuse="white">arrowright.png</texturefocus>
@@ -97,10 +94,16 @@
 				<animation effect="slide" start="0,-90" end="0,0" time="400" delay="200" condition="[System.GetBool(lookandfeel.enablerssfeeds) + [String.IsEmpty(Skin.String(HorizontalRSSPosition)) | String.IsEqual(Skin.String(HorizontalRSSPosition),low)] + !String.IsEqual(Skin.String(HorizontalRSSPosition),high) + Skin.HasSetting(SystemBarOnTop)] | [!System.GetBool(lookandfeel.enablerssfeeds) + Skin.HasSetting(SystemBarOnTop)]">WindowOpen</animation>
 				<animation effect="slide" end="0,-90" start="0,0" time="300" condition="[System.GetBool(lookandfeel.enablerssfeeds) + [String.IsEmpty(Skin.String(HorizontalRSSPosition)) | String.IsEqual(Skin.String(HorizontalRSSPosition),low)] + !String.IsEqual(Skin.String(HorizontalRSSPosition),high) + Skin.HasSetting(SystemBarOnTop)] | [!System.GetBool(lookandfeel.enablerssfeeds) + Skin.HasSetting(SystemBarOnTop)]">WindowClose</animation>
 				<control type="image">
-					<width>100%</width>
+					<right>140</right>
 					<height>87</height>
 					<texture colordiffuse="$VAR[ThemeHomeSystemBarsColor]" flipy="true">submenu_bar.png</texture>
 					<visible>[String.IsEmpty(Skin.String(ThemeHomeMenuBarColor)) | String.IsEqual(Skin.String(ThemeHomeMenuBarColor),None)] + [String.IsEmpty(Skin.String(ThemeHomeSystemBarsColor)) | String.IsEqual(Skin.String(ThemeHomeSystemBarsColor),None)]</visible>
+				</control>
+				<control type="image">
+					<right>50</right>
+					<width>90</width>
+					<height>87</height>
+					<texture flipx="true" flipy="true">submenu_end.png</texture>
 				</control>
 				<control type="image">
 					<width>100%</width>
@@ -110,7 +113,7 @@
 				</control>
 				<include condition="System.HasAddon(service.library.data.provider)">PlayListStatsList</include>
 				<control type="label">
-					<top>46</top>
+					<top>44</top>
 					<width>1080</width>
 					<height>40</height>
 					<label>$VAR[LibraryStatsVar]</label>
@@ -121,8 +124,8 @@
 				</control>
 				<control type="grouplist" id="9020">
 					<visible>!String.IsEmpty(Container(9000).ListItem.Property(InfoLine)) | !Skin.HasSetting(CenteredInfoLine)</visible>
-					<left>1100</left>
-					<top>46</top>
+					<left>980</left>
+					<top>44</top>
 					<width>800</width>
 					<height>41</height>
 					<align>right</align>
@@ -283,14 +286,20 @@
 				<top>162</top>
 				<include condition="[String.IsEmpty(Skin.String(HorizontalRSSPosition)) | !String.IsEmpty(Skin.String(HorizontalRSSPosition)) + !Skin.HasSetting(Enable.VisibleSubmenu)] + system.getbool(lookandfeel.enablerssfeeds) | [!system.getbool(lookandfeel.enablerssfeeds) + !Skin.HasSetting(Enable.VisibleSubmenu)]">SubMenuAnimation</include>
 				<control type="image">
-					<width>100%</width>
-					<height>97</height>
-					<texture colordiffuse="$VAR[ThemeHomeSystemBarsColor]">submenu_bar.png</texture>
+					<left>50</left>
+					<width>90</width>
+					<height>87</height>
+					<texture>submenu_end.png</texture>
+				</control>
+				<control type="image">
+					<left>140</left>
+					<height>87</height>
+					<texture>submenu_bar.png</texture>
 					<visible>[String.IsEmpty(Skin.String(ThemeHomeMenuBarColor)) | String.IsEqual(Skin.String(ThemeHomeMenuBarColor),None)] + [String.IsEmpty(Skin.String(ThemeHomeSystemBarsColor)) | String.IsEqual(Skin.String(ThemeHomeSystemBarsColor),None)]</visible>
 				</control>
 				<control type="image">
 					<width>100%</width>
-					<height>97</height>
+					<height>87</height>
 					<texture colordiffuse="$VAR[ThemeHomeSystemBarsColor]">submenu_bar_white.png</texture>
 					<visible>[!String.IsEmpty(Skin.String(ThemeHomeMenuBarColor)) + !String.IsEqual(Skin.String(ThemeHomeMenuBarColor),None)] | [!String.IsEmpty(Skin.String(ThemeHomeSystemBarsColor)) + !String.IsEqual(Skin.String(ThemeHomeSystemBarsColor),None)]</visible>
 				</control>
