@@ -2056,7 +2056,7 @@
 	</variable>
 	<variable name="ThemeHomeSystemBarsColor">
 		<value condition="!String.IsEmpty(Skin.String(ThemeHomeSystemBarsColor)) + !String.IsEqual(Skin.String(ThemeHomeSystemBarsColor),None)">$INFO[Skin.String(ThemeHomeSystemBarsColor)]</value>
-		<value>black</value>
+		<value>white</value>
 	</variable>
 	<variable name="ThemeHomeSystemGlowBarsColor">
 		<value condition="!String.IsEmpty(Skin.String(ThemeHomeSystemGlowBarsColor)) + !String.IsEqual(Skin.String(ThemeHomeSystemGlowBarsColor),None)">$INFO[Skin.String(ThemeHomeSystemGlowBarsColor)]</value>
