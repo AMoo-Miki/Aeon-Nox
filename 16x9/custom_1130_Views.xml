@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1130" type="dialog">
 	<defaultcontrol always="true">9000</defaultcontrol>
+	<expression name="ShowHighList">
+		[Container.Content(files) + !Skin.HasSetting(files.nohighlist)] |
+		[Container.Content(songs) + !Skin.HasSetting(songs.nohighlist)] |
+		[Container.Content(artists) + !Skin.HasSetting(artists.nohighlist)] |
+		[Container.Content(albums) + !Skin.HasSetting(albums.nohighlist)] |
+		[Container.Content(movies) + !Skin.HasSetting(movies.nohighlist)] |
+		[Container.Content(tvshows) + !Skin.HasSetting(tvshows.nohighlist)] |
+		[Container.Content(seasons) + !Skin.HasSetting(seasons.nohighlist)] |
+		[Container.Content(episodes) + !Skin.HasSetting(episodes.nohighlist)] |
+		[Container.Content(musicvideos) + !Skin.HasSetting(musicvideos.nohighlist)] |
+		[Container.Content(genres) + !Skin.HasSetting(genres.nohighlist)] |
+		[Container.Content(years) + !Skin.HasSetting(years.nohighlist)] |
+		[Container.Content(actors) + !Skin.HasSetting(actors.nohighlist)] |
+		[Container.Content(playlists) + !Skin.HasSetting(playlists.nohighlist)] |
+		[Container.Content(plugins) + !Skin.HasSetting(plugins.nohighlist)] |
+		[Container.Content(studios) + !Skin.HasSetting(studios.nohighlist)] |
+		[Container.Content(directors) + !Skin.HasSetting(directors.nohighlist)] |
+		[Container.Content(sets) + !Skin.HasSetting(sets.nohighlist)] |
+		[Container.Content(tags) + !Skin.HasSetting(tags.nohighlist)] |
+		[Container.Content(countries) + !Skin.HasSetting(countries.nohighlist)] |
+		[Container.Content(roles) + !Skin.HasSetting(roles.nohighlist)] |
+		[Container.Content(images) + !Skin.HasSetting(images.nohighlist)]
+	</expression>
 	<controls>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(1132)" reversible="false">Conditional</animation>
@@ -98,7 +121,8 @@
 						</item>
 						<item>
 							<label>$LOCALIZE[31241]</label>
-							<onclick>Container.SetViewMode(501)</onclick>
+							<onclick condition="!$EXP[ShowHighList]">Container.SetViewMode(5011)</onclick>
+							<onclick condition="$EXP[ShowHighList]">Container.SetViewMode(5012)</onclick>
 							<visible>Window.IsActive(videos)</visible>
 							<visible>[Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Skin.HasSetting(Disable.LowListView)</visible>
 						</item>
