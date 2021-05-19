@@ -20,6 +20,7 @@
 	<include file="script-skinviewtypes-includes.xml" />
 	<include file="Variables.xml" />
 	<include file="Variables_Widgets.xml" />
+    <include file="IncludesUpNext.xml" />
 	<include name="ScriptHelperFlags">
 		<control type="grouplist">
 			<visible>[Container.Content(movies) | Container.Content(tvshows)] + !String.IsEmpty(Container(9142).ListItem.Rating(tomatometerallcritics))</visible>
