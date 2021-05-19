@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">3012</defaultcontrol>
+    <onload>Dialog.Close(fullscreeninfo,true)</onload>
+    <onload>Dialog.Close(videoosd,true)</onload>
+	<!-- stll watching intended auto close if no button presses -->
+    <controls>
+        <control type="group">
+            <animation type="WindowOpen" reversible="false">
+                <effect type="fade" start="0" end="100" time="500" />
+            </animation>
+            <animation type="WindowClose" reversible="false">
+                <effect type="fade" start="100" end="0" time="100" />
+            </animation>
+			
+			<control type="button" id="3013">
+				<include>HiddenButton</include>
+			</control>
+		
+			<!-- Background -->
+			<control type="image">
+				<top>350</top>
+				<width>110%</width>
+				<height>170</height>
+				<texture colordiffuse="cc000000">upnext/gradient.png</texture>
+			</control>
+			<control type="image">
+				<top>520</top>
+				<width>110%</width>
+				<height>170</height>
+				<texture flipy="true" colordiffuse="cc000000">upnext/gradient.png</texture>
+			</control>
+			<!-- Info / Artwork -->
+			<control type="group">
+				<top>370</top>
+				<width>100%</width>
+				<control type="label">
+					<top>20</top>
+					<height>35</height>
+					<aligny>top</aligny>
+					<align>center</align>
+					<font>font30_title</font>
+					<textcolor>white</textcolor>
+					<label>[CAPITALIZE][B]$ADDON[service.upnext 30024][/B][/CAPITALIZE]</label>
+				</control>
+				<!-- art location - Thumb right, clear logo left -->
+				<control type="image">
+					<top>82</top>
+					<left>120</left>
+					<width>360</width>
+					<height>139.5</height>
+					<aspect>keep</aspect>
+					<include condition="Skin.HasSetting(Upnext_diffused_art)">Upnext_diffused_clearlogo</include>
+					<include condition="!Skin.HasSetting(Upnext_diffused_art)">Upnext_No_diffused_clearlogo</include>
+				</control>
+				
+				<!-- diffused image -->
+				<control type="image">
+					<top>15</top>
+					<right>80</right>
+					<width>447.5</width>
+					<height>252.5</height>
+					<include condition="Skin.HasSetting(Upnext_diffused_art)">Upnext_diffused_thumb</include>
+					<include condition="!Skin.HasSetting(Upnext_diffused_art)">Upnext_No_diffused_thumb</include>
+					<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+				</control>
+
+				<control type="label">
+					<top>230</top>
+					<height>20</height>
+					<width>100%</width>
+					<align>center</align>
+					<textcolor>labelheader</textcolor>
+					<font>font13</font>
+					<label>$VAR[SeasonEpisodesNumberVar]: $INFO[Window.Property(title)]</label>
+				</control>
+			</control>
+			<!-- Buttons -->
+			<control type="grouplist">
+				<orientation>horizontal</orientation>
+				<top>470</top>
+				<width>100%</width>
+				<height>256</height>
+				<align>center</align>
+				<aligny>bottom</aligny>
+				<control type="radiobutton" id="3012">
+					<label>  $LOCALIZE[107], $ADDON[service.upnext 30010]</label>
+					<height>100</height>
+					<width>600</width>
+					<font>fontArial15</font>
+					<textcolor></textcolor>
+					<focusedcolor>grey2</focusedcolor>
+					<texturefocus colordiffuse="grey2" border="5">upnext/detail-framehardedge.png</texturefocus>
+					<texturenofocus></texturenofocus>
+					<textureradioonfocus></textureradioonfocus>
+					<textureradioofffocus></textureradioofffocus>
+					<textureradioonnofocus></textureradioonnofocus>
+					<textureradiooffnofocus></textureradiooffnofocus>
+					<onback>SendClick(3013)</onback>
+				</control>
+			</control>
+			<control type="image">
+				<top>480</top>
+				<left>1145</left>
+				<width>80</width>
+				<height>80</height>
+				<aspect>keep</aspect>
+				<texture colordiffuse="grey2">$VAR[nextupbutton_TimeRemaining]</texture>
+			</control>
+        </control>
+    </controls>
+</window>

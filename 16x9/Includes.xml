@@ -15,6 +15,7 @@
 	<include file="script-skinshortcuts-includes.xml" />
 	<include file="Variables.xml" />
 	<include file="Variables_Widgets.xml" />
+	<include file="IncludesUpNext.xml" />
 	<include file="View_50_List.xml" />
 	<include file="View_51_InfoWall.xml" />
 	<include file="View_52_Landscape.xml" />
