@@ -916,6 +916,7 @@
 							<left>-18</left>
 							<width>100</width>
 							<height>68</height>
+							<top>2</top>
 							<font>font12_title</font>
 							<align>center</align>
 							<label>$VAR[ListOverlayEpisodesVar]</label>
@@ -982,6 +983,7 @@
 							<left>-18</left>
 							<width>100</width>
 							<height>68</height>
+							<top>2</top>
 							<font>font12_title</font>
 							<align>center</align>
 							<label>$VAR[ListOverlayEpisodesVar]</label>
