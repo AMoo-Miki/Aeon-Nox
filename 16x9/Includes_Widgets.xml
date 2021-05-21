@@ -113,13 +113,38 @@
 			<!-- Plot -->
 			<control type="textbox">
 				<width>$PARAM[width]</width>
-				<height>149</height>
+				<height>90</height>
 				<font>font14_textbox</font>
 				<align>justify</align>
 				<textcolor>white2</textcolor>
 				<shadowcolor>shadow</shadowcolor>
 				<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 				<label>$VAR[HomeWidgetInfoPlotVar]</label>
+			</control>
+			<!-- MPAA, Resolution, and Audio -->
+			<control type="grouplist">
+				<width>$PARAM[width]</width>
+				<height>48</height>
+				<itemgap>20</itemgap>
+				<orientation>horizontal</orientation>
+				<control type="image">
+					<width>71</width>
+					<height>48</height>
+					<include>MediaFlagValues</include>
+					<texture fallback="flags/default/mpaa/NR.png">$VAR[MediaFlagsPathVar]/mpaa/$VAR[RatingFlagVar]</texture>
+				</control>
+				<control type="image">
+					<width>71</width>
+					<height>48</height>
+					<include>MediaFlagValues</include>
+					<texture>$VAR[MediaFlagsPathVar]/resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
+				</control>
+				<control type="image">
+					<width>71</width>
+					<height>48</height>
+					<include>MediaFlagValues</include>
+					<texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[ListItem.AudioChannels,,.png]</texture>
+				</control>
 			</control>
 		</control>
 	</include>
