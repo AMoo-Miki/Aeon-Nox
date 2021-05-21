@@ -49,13 +49,13 @@
 		</control>
 		<control type="image">
 			<fadetime>600</fadetime>
-			<visible>String.StartsWith(Container(9000).ListItem.Property(background),s:live) | [Control.HasFocus(9010) + String.StartsWith(Container(9010).ListItem.Property(background),s:live)]</visible>
+			<visible>[String.StartsWith(Container(9000).ListItem.Property(background),s:live) | [Control.HasFocus(9010) + String.StartsWith(Container(9010).ListItem.Property(background),s:live)]]  + ![ControlGroup(90010).HasFocus() | ControlGroup(90020).HasFocus()]</visible>
 			<include>FullscreenDimensions</include>
 			<aspectratio align="center" aligny="top">scale</aspectratio>
 			<texture background="true">special://skin/backgrounds/default_livecases.jpg</texture>
 		</control>
 		<control type="group">
-			<visible>String.StartsWith(Container(9000).ListItem.Property(background),s:live) + ![String.EndsWith(Container(9000).ListItem.Property(background),i:songs) | String.EndsWith(Container(9000).ListItem.Property(background),i:albums)] | Control.HasFocus(9010) + String.StartsWith(Container(9010).ListItem.Property(background),s:live) + ![String.EndsWith(Container(9010).ListItem.Property(background),i:songs) | String.EndsWith(Container(9010).ListItem.Property(background),i:albums)]</visible>
+			<visible>[String.StartsWith(Container(9000).ListItem.Property(background),s:live) + ![String.EndsWith(Container(9000).ListItem.Property(background),i:songs) | String.EndsWith(Container(9000).ListItem.Property(background),i:albums)] | Control.HasFocus(9010) + String.StartsWith(Container(9010).ListItem.Property(background),s:live) + ![String.EndsWith(Container(9010).ListItem.Property(background),i:songs) | String.EndsWith(Container(9010).ListItem.Property(background),i:albums)]] + ![ControlGroup(90010).HasFocus() | ControlGroup(90020).HasFocus()]</visible>
 			<animation effect="fade" time="600">WindowOpen</animation>
 			<animation effect="fade" time="600">VisibleChange</animation>
 			<control type="group">
