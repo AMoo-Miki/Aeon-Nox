@@ -128,6 +128,16 @@
 		<shadowcolor>shadow</shadowcolor>
 		<focusedcolor>white</focusedcolor>
 	</include>
+	<include name="LowListButtonsValues">
+		<height>45</height>
+		<width>501</width>
+		<textoffsetx>15</textoffsetx>
+		<aligny>top</aligny>
+		<font>font14</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>shadow</shadowcolor>
+		<focusedcolor>white</focusedcolor>
+	</include>
 	<include name="SettingsPanelButtonsValues">
 		<height>90</height>
 		<width>1256</width>
@@ -142,6 +152,14 @@
 	<include name="MediaFlagValues">
 		<width>135</width>
 		<height>90</height>
+		<aspectratio>keep</aspectratio>
+		<fadetime>250</fadetime>
+		<colordiffuse>grey</colordiffuse>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</include>
+	<include name="LowListMediaFlagValues">
+		<width>130</width>
+		<height>84</height>
 		<aspectratio>keep</aspectratio>
 		<fadetime>250</fadetime>
 		<colordiffuse>grey</colordiffuse>
