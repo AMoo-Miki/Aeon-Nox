@@ -373,7 +373,7 @@
 								<usecontrolcoords>true</usecontrolcoords>
 								<itemgap>3</itemgap>
 								<control type="image">
-									<top>-4</top>
+									<top>-6</top>
 									<width>75</width>
 									<height>100</height>
 									<aspectratio>keep</aspectratio>
@@ -381,6 +381,7 @@
 									<texture>logos/imdb.png</texture>
 								</control>
 								<control type="label">
+									<top>2</top>
 									<width>auto</width>
 									<height>90</height>
 									<align>center</align>
