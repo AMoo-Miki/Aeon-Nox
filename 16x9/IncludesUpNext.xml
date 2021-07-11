@@ -174,4 +174,14 @@
 		</animation>
 	</include>
 
+	<include name="HiddenButton">
+		<left>-2000</left>
+		<top>-2000</top>
+		<width>1</width>
+		<height>1</height>
+		<label></label>
+		<texturenofocus></texturenofocus>
+		<texturefocus></texturefocus>
+	</include>
+
 </includes>
