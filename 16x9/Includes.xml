@@ -3767,4 +3767,14 @@
 			</control>
 		</control>
 	</include>
+	<!-- UpNext -->
+	<include name="HiddenButton">
+		<posx>-20</posx>
+		<posy>-20</posy>
+		<width>1</width>
+		<height>1</height>
+		<label></label>
+		<texturenofocus></texturenofocus>
+		<texturefocus></texturefocus>
+	</include>
 </includes>
