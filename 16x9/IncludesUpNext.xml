@@ -12,8 +12,8 @@
 	</variable>
 
 	<variable name="nextupbutton_TimeRemaining">
-		<value condition="Integer.IsGreater(Player.TimeRemaining(ss),30)">upnext/icons/30.png</value>
-		<value condition="Integer.IsLessOrEqual(Player.TimeRemaining(ss),30)">$INFO[Player.TimeRemaining(ss),upnext/icons/,.png]</value>
+		<value condition="Integer.IsGreater(Player.TimeRemaining(secs),120)">upnext/icons/120.png</value>
+		<value condition="Integer.IsLessOrEqual(Player.TimeRemaining(secs),120)">$INFO[Player.TimeRemaining(secs),upnext/icons/,.png]</value>
 	</variable>
 
 	<include name="UpNext_fancy_triangle">
@@ -79,23 +79,26 @@
 				<texture aligny="center" align="center">$VAR[nextupbutton_TimeRemaining]</texture>
 			</control>
 		</control>
+		<!-- MPAA Image -->
 		<control type="image">
 			<right>570</right>
 			<top>900</top>
 			<width>80</width>
 			<height>55</height>
 			<aspectratio aligny="center" align="right">keep</aspectratio>
-			<texture colordiffuse="grey2" background="true" fallback="flags/mpaa/NR.png">$VAR[VideoRatingFlagVar]</texture>
+			<texture colordiffuse="grey2" background="true">$VAR[MediaFlagsPathVar]/mpaa/$VAR[VideoRatingFlagVar]</texture>
 		</control>
+		<!-- Studio Image -->
 		<control type="image">
 			<right>580</right>
 			<top>960</top>
 			<width>161</width>
 			<height>109</height>
 			<aspectratio aligny="center" align="right">keep</aspectratio>
-			<texture colordiffuse="grey2" background="true" fallback="flags/studios/default-studio.png">$VAR[StudioFlagPathVar]$INFO[VideoPlayer.Studio,,.png]</texture>
+			<texture colordiffuse="grey2" background="true" fallback="flags/studios/default-studio.png">$VAR[PathFlagsStudios]$INFO[VideoPlayer.Studio,,.png]</texture>
 			<visible>!String.IsEmpty(VideoPlayer.Studio)</visible>
 		</control>
+		<!-- ClearLogo -->
 		<control type="image">
 			<top>550</top>
 			<right>25</right>
@@ -117,6 +120,7 @@
 			<label>[UPPERCASE][B]$INFO[Window.Property(tvshowtitle)][/B][/UPPERCASE]</label>
 			<visible>String.IsEmpty(Window.Property(clearlogo))</visible>
 		</control>
+		<!-- Episode Title -->
 		<control type="grouplist">
 			<top>1010</top>
 			<right>10</right>
@@ -126,7 +130,7 @@
 			<control type="label">
 				<height>30</height>
 				<align>center</align>
-				<textcolor>labelheader</textcolor>
+				<textcolor>white</textcolor>
 				<shadowcolor></shadowcolor>
 				<font>font13</font>
 				<label>$VAR[SeasonEpisodesNumberVar]: $INFO[Window.Property(title)]</label>

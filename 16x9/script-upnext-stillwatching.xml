@@ -70,7 +70,7 @@
 					<height>20</height>
 					<width>100%</width>
 					<align>center</align>
-					<textcolor>labelheader</textcolor>
+					<textcolor>white</textcolor>
 					<font>font13</font>
 					<label>$VAR[SeasonEpisodesNumberVar]: $INFO[Window.Property(title)]</label>
 				</control>
