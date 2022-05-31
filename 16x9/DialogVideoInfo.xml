@@ -254,16 +254,16 @@
 							<height>100</height>
 							<control type="label">
 								<width>auto</width>
-								<height>60</height>
+								<height>61</height>
 								<align>center</align>
 								<label>$INFO[ListItem.Duration(mins)]</label>
 								<font>font48_bold</font>
 								<textcolor>grey</textcolor>
-								<visible>![String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)]</visible>
+								<visible>![String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] | [[String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + String.IsEmpty(Window(Home).Property(NextAired.Runtime)) + !String.IsEmpty(ListItem.Duration)]</visible>
 							</control>
 							<control type="label">
 								<width>auto</width>
-								<height>60</height>
+								<height>61</height>
 								<align>center</align>
 								<label>$INFO[Window(Home).Property(NextAired.Runtime)]</label>
 								<font>font48_bold</font>
@@ -803,7 +803,7 @@
 				<!-- Buttons LABEL -->
 				<control type="group">
 					<left>-5</left>
-					<top>542</top>
+					<top>545</top>
 					<control type="button">
 						<width>650</width>
 						<texturenofocus />
