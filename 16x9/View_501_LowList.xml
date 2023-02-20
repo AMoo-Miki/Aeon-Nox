@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<expression name="ShowHighList">
-		<!-- [Container.Content(files) + !Skin.HasSetting(files.nohighlist)] | -->
+		[Container.Content(files) + !Skin.HasSetting(files.nohighlist)] |
 		[Container.Content(songs) + !Skin.HasSetting(songs.nohighlist)] |
 		[Container.Content(artists) + !Skin.HasSetting(artists.nohighlist)] |
 		[Container.Content(albums) + !Skin.HasSetting(albums.nohighlist)] |
@@ -1003,7 +1003,7 @@
 						<width>64</width>
 						<height>64</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlay]</texture>
+						<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlayFocused]</texture>
 					</control>
 					<control type="group">
 						<left>742</left>

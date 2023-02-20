@@ -261,6 +261,11 @@
 		<value condition="ListItem.IsResumable">overlays/list/resumable.png</value>
 		<value>$INFO[ListItem.Overlay,overlays/list/]</value>
 	</variable>
+	<variable name="ListItemOverlayFocused">
+		<value condition="ListItem.IsResumable">overlays/list/resumable.png</value>
+		<value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png)">overlays/list/OverlayWatchedFocused.png</value>
+		<value>$INFO[ListItem.Overlay,overlays/list/]</value>
+	</variable>
 	<variable name="ListOverlayEpisodesVar">
 		<value condition="Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99)">   99 +</value>
 		<value>$INFO[ListItem.Property(UnWatchedEpisodes)]</value>
