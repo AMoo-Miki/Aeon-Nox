@@ -75,38 +75,37 @@
 				<include>VisibleFadeAnimation</include>
 				<visible>Container.Content(movies) | Container.Content(episodes)</visible>
 				<control type="image">
-					<width>168</width>
+					<width>144</width>
 					<colordiffuse>grey2</colordiffuse>
 					<include>MediaFlagValues</include>
 					<texture>$VAR[MediaFlagsPathVar]/resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
 					<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 				</control>
 				<control type="image">
-					<left>124</left>
-					<top>2</top>
-					<width>64</width>
+					<left>146</left>
+					<width>144</width>
 					<include>MediaFlagValues</include>
 					<texture>$VAR[MediaFlagsPathVar]/$INFO[ListItem.HdrType,hdr/,.png]</texture>
 				</control>
 				<control type="image">
-					<left>200</left>
-					<width>168</width>
+					<left>292</left>
+					<width>144</width>
 					<colordiffuse>grey2</colordiffuse>
 					<include>MediaFlagValues</include>
 					<texture>$VAR[MediaFlagsPathVar]/videocodec/$VAR[SourceFlagVar]</texture>
 					<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 				</control>
 				<control type="image">
-					<left>380</left>
-					<width>168</width>
+					<left>438</left>
+					<width>144</width>
 					<colordiffuse>grey2</colordiffuse>
 					<include>MediaFlagValues</include>
 					<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
 					<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 				</control>
 				<control type="image">
-					<left>560</left>
-					<width>168</width>
+					<left>584</left>
+					<width>144</width>
 					<colordiffuse>grey2</colordiffuse>
 					<include>MediaFlagValues</include>
 					<texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[ListItem.AudioChannels,,.png]</texture>

@@ -610,29 +610,27 @@
 						<control type="group">
 							<visible>[Control.IsVisible(52) + String.IsEqual(Skin.String(52.Movies.ViewFlags),$LOCALIZE[31160]) + Container.Content(movies)] | [Control.IsVisible(52) + String.IsEqual(Skin.String(52.Episodes.ViewFlags),$LOCALIZE[31160]) + Container.Content(episodes)] | [Control.IsVisible(53) + String.IsEqual(Skin.String(53.Movies.ViewFlags),$LOCALIZE[31160]) + Container.Content(movies)] | [Control.IsVisible(59) + String.IsEqual(Skin.String(59.Movies.ViewFlags),$LOCALIZE[31160]) + Container.Content(movies)] | [Control.IsVisible(503) + String.IsEqual(Skin.String(503.Movies.ViewFlags),$LOCALIZE[31160]) + Container.Content(movies)]</visible>
 							<control type="image">
-								<left>220</left>
+								<left>175</left>
 								<include>MediaFlagValues</include>
 								<texture>$VAR[MediaFlagsPathVar]/resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
 							</control>
 							<control type="image">
-								<left>325</left>
-								<top>2</top>
-								<width>58</width>
+								<left>300</left>
 								<include>MediaFlagValues</include>
 								<texture>$VAR[MediaFlagsPathVar]/$INFO[ListItem.HdrType,hdr/,.png]</texture>
 							</control>
 							<control type="image">
-								<left>388</left>
+								<left>425</left>
 								<include>MediaFlagValues</include>
 								<texture>$VAR[MediaFlagsPathVar]/videocodec/$VAR[SourceFlagVar]</texture>
 							</control>
 							<control type="image">
-								<left>1393</left>
+								<left>1475</left>
 								<include>MediaFlagValues</include>
 								<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
 							</control>
 							<control type="image">
-								<left>1554</left>
+								<left>1600</left>
 								<include>MediaFlagValues</include>
 								<texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[ListItem.AudioChannels,,.png]</texture>
 							</control>
@@ -741,6 +739,23 @@
 								</control>
 								<control type="group">
 									<animation effect="slide" end="-160" condition="Control.IsVisible(50)">Conditional</animation>
+									<control type="group">
+										<left>180</left>
+										<control type="image" id="800912">
+											<include>MediaFlagValues</include>
+											<texture>$VAR[PathFlagsStudios]$INFO[ListItem.Studio,,.png]</texture>
+										</control>
+										<control type="label">
+											<width>135</width>
+											<height>90</height>
+											<align>center</align>
+											<label>$INFO[ListItem.Studio]</label>
+											<font>font10</font>
+											<textcolor>grey</textcolor>
+											<wrapmultiline>true</wrapmultiline>
+											<visible>String.IsEmpty(Control.GetLabel(800912))</visible>
+										</control>
+									</control>
 									<control type="image">
 										<left>330</left>
 										<include>MediaFlagValues</include>
@@ -753,29 +768,27 @@
 										<texture>$VAR[MediaFlagsPathVar]/resolution/$INFO[ListItem.VideoResolution].png</texture>
 									</control>
 									<control type="image">
-										<left>594</left>
-										<top>2</top>
-										<width>64</width>
+										<left>630</left>
 										<include>MediaFlagValues</include>
 										<texture>$VAR[MediaFlagsPathVar]/$INFO[ListItem.HdrType,hdr/,.png]</texture>
 									</control>
 									<control type="image">
-										<left>670</left>
+										<left>780</left>
 										<include>MediaFlagValues</include>
 										<texture>$VAR[MediaFlagsPathVar]/videocodec/$VAR[SourceFlagVar]</texture>
 									</control>
 									<control type="image">
-										<left>860</left>
+										<left>930</left>
 										<include>MediaFlagValues</include>
 										<texture>$VAR[MediaFlagsPathVar]/aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 									</control>
 									<control type="image">
-										<left>1050</left>
+										<left>1080</left>
 										<include>MediaFlagValues</include>
 										<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
 									</control>
 									<control type="image">
-										<left>1240</left>
+										<left>1230</left>
 										<include>MediaFlagValues</include>
 										<texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[ListItem.AudioChannels,,.png]</texture>
 									</control>
