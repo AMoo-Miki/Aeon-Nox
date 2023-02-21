@@ -1064,24 +1064,17 @@
 										<visible>String.IsEmpty(Control.GetLabel(800011))</visible>
 									</control>
 								</control>
-								<control type="grouplist">
-									<width>195</width>
-									<height>90</height>
-									<orientation>horizontal</orientation>
-									<usecontrolcoords>true</usecontrolcoords>
-									<itemgap>-32</itemgap>
-									<control type="image">
-										<width>160</width>
-										<include>MediaFlagValues</include>
-										<texture>$VAR[MediaFlagsPathVar]/resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
-									</control>
-									<control type="image">
-										<top>2</top>
-										<width>64</width>
-										<include>MediaFlagValues</include>
-										<texture>$VAR[MediaFlagsPathVar]/$INFO[ListItem.HdrType,hdr/,.png]</texture>
-										<visible>!String.IsEmpty(ListItem.HdrType)</visible>
-									</control>
+								<control type="image">
+									<width>160</width>
+									<include>MediaFlagValues</include>
+									<texture>$VAR[MediaFlagsPathVar]/resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
+									<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
+								</control>
+								<control type="image">
+									<width>160</width>
+									<include>MediaFlagValues</include>
+									<texture>$VAR[MediaFlagsPathVar]/$INFO[ListItem.HdrType,hdr/,.png]</texture>
+									<visible>!String.IsEmpty(ListItem.HdrType)</visible>
 								</control>
 								<control type="image">
 									<width>160</width>
