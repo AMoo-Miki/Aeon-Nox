@@ -1361,19 +1361,21 @@
 		<control type="grouplist">
 			<visible>!String.IsEmpty(ListItem.Top250)</visible>
 			<width>165</width>
-			<orientation>horizontal</orientation>
-			<control type="image">
-				<width>65</width>
-				<aspectratio>keep</aspectratio>
-				<colordiffuse>grey</colordiffuse>
-				<texture>logos/imdb.png</texture>
-			</control>
+			<itemgap>-8</itemgap>
 			<control type="label">
-				<width>auto</width>
+				<width>165</width>
+				<height>60</height>
 				<align>center</align>
 				<font>font16_title_bold</font>
 				<textcolor>grey</textcolor>
 				<label>$INFO[ListItem.Top250, #]</label>
+			</control>
+			<control type="image">
+				<width>165</width>
+				<height>25</height>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>grey</colordiffuse>
+				<texture>logos/imdb.png</texture>
 			</control>
 		</control>
 	</include>
@@ -1454,19 +1456,21 @@
 		<control type="grouplist">
 			<visible>!String.IsEmpty(ListItem.Rating(themoviedb))</visible>
 			<width>165</width>
-			<orientation>horizontal</orientation>
-			<itemgap>10</itemgap>
-			<control type="image">
-				<width>68</width>
-				<aspectratio>keep</aspectratio>
-				<colordiffuse>grey</colordiffuse>
-				<texture>logos/tmdb.png</texture>
-			</control>
+			<itemgap>-8</itemgap>
 			<control type="label">
-				<width>auto</width>
+				<width>165</width>
+				<height>60</height>
+				<align>center</align>
 				<font>font16_title_bold</font>
 				<textcolor>grey</textcolor>
 				<label>$INFO[ListItem.Rating(themoviedb)]</label>
+			</control>
+			<control type="image">
+				<width>165</width>
+				<height>25</height>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>grey</colordiffuse>
+				<texture>logos/tmdb.png</texture>
 			</control>
 		</control>
 		<control type="grouplist">
@@ -1510,18 +1514,21 @@
 		<control type="grouplist">
 			<visible>!String.IsEmpty(ListItem.Rating(trakt))</visible>
 			<width>165</width>
-			<orientation>horizontal</orientation>
-			<control type="image">
-				<width>68</width>
-				<aspectratio>keep</aspectratio>
-				<colordiffuse>grey</colordiffuse>
-				<texture>logos/trakt-clearlogo.png</texture>
-			</control>
+			<itemgap>-8</itemgap>
 			<control type="label">
-				<width>auto</width>
+				<width>165</width>
+				<height>60</height>
+				<align>center</align>
 				<font>font16_title_bold</font>
 				<textcolor>grey</textcolor>
 				<label>$INFO[ListItem.Rating(trakt)]</label>
+			</control>
+			<control type="image">
+				<width>165</width>
+				<height>25</height>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>grey</colordiffuse>
+				<texture>logos/trakt-clearlogo.png</texture>
 			</control>
 		</control>
 		<!-- TMDbHelper Trakt Rating -->
