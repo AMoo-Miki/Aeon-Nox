@@ -237,7 +237,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlay]</texture>
+							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlayFocused]</texture>
 						</control>
 					</focusedlayout>
 					<itemlayout height="70" width="1056" condition="Container.Content(sets)">
@@ -280,7 +280,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlay]</texture>
+							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlayFocused]</texture>
 						</control>
 					</focusedlayout>
 					<itemlayout height="70" width="1056" condition="Container.Content(tvshows)">
@@ -372,7 +372,7 @@
 								<width>64</width>
 								<height>64</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlay]</texture>
+								<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlayFocused]</texture>
 							</control>
 							<control type="label">
 								<width>64</width>
@@ -463,7 +463,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlay]</texture>
+							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlayFocused]</texture>
 						</control>
 					</focusedlayout>
 					<itemlayout height="70" width="1056" condition="Container.Content(seasons)">
@@ -535,7 +535,7 @@
 								<width>64</width>
 								<height>64</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlay]</texture>
+								<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlayFocused]</texture>
 							</control>
 							<control type="label">
 								<width>64</width>
