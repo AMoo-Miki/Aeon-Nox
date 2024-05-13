@@ -119,6 +119,16 @@
 		<shadowcolor>shadow</shadowcolor>
 		<focusedcolor>white</focusedcolor>
 	</include>
+	<include name="LowListButtonsMultilineValues">
+		<height>90</height>
+		<width>501</width>
+		<textoffsetx>15</textoffsetx>
+		<aligny>top</aligny>
+		<font>font14_tall</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>shadow</shadowcolor>
+		<focusedcolor>white</focusedcolor>
+	</include>
 	<include name="LowListButtonsValues">
 		<height>45</height>
 		<width>501</width>
