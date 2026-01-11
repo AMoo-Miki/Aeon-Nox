@@ -823,8 +823,11 @@
 			<onup>703</onup>
 			<ondown>706</ondown>
 			<control type="button" id="701">
-				<texturefocus />
-				<font>IconOSDButtons</font>
+				<texturefocus>osd/buttons/OSDFO.png</texturefocus>
+				<texturenofocus>osd/buttons/OSDNF.png</texturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>IconVideoOSDButtons</font>
 				<label></label>
 				<focusedcolor>$VAR[FocusedOSDButtonsColor]</focusedcolor>
 				<textcolor>$VAR[UnfocusedOSDButtonsColor]</textcolor>
@@ -835,8 +838,11 @@
 				<oninfo>ActivateWindow(osdaudiosettings)</oninfo>
 			</control>
 			<control type="button" id="702">
-				<texturefocus />
-				<font>IconOSDButtons</font>
+				<texturefocus>osd/buttons/OSDFO.png</texturefocus>
+				<texturenofocus>osd/buttons/OSDNF.png</texturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>IconVideoOSDButtonsSmall</font>
 				<label></label>
 				<focusedcolor>$VAR[FocusedOSDButtonsColor]</focusedcolor>
 				<textcolor>$VAR[UnfocusedOSDButtonsColor]</textcolor>
@@ -847,9 +853,13 @@
 				<oninfo>ActivateWindow(osdvideosettings)</oninfo>
 			</control>
 			<control type="togglebutton" id="703">
-				<texturefocus />
-				<alttexturefocus />
-				<font>IconOSDButtons</font>
+				<texturefocus>osd/buttons/OSDFO.png</texturefocus>
+				<texturenofocus>osd/buttons/OSDNF.png</texturenofocus>
+				<alttexturefocus>osd/buttons/OSDFO.png</alttexturefocus>
+				<alttexturenofocus>osd/buttons/OSDNF.png</alttexturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>IconVideoOSDButtonsSmall</font>
 				<label></label>
 				<altlabel></altlabel>
 				<focusedcolor>$VAR[FocusedOSDButtonsColor]</focusedcolor>
@@ -862,8 +872,11 @@
 				<oninfo>ActivateWindow(SubtitleSearch)</oninfo>
 			</control>
 			<control type="button" id="600">
-				<texturefocus />
-				<font>IconOSDButtons</font>
+				<texturefocus>osd/buttons/OSDFO.png</texturefocus>
+				<texturenofocus>osd/buttons/OSDNF.png</texturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>IconVideoOSDButtons</font>
 				<label></label>
 				<focusedcolor>$VAR[FocusedOSDButtonsColor]</focusedcolor>
 				<textcolor>$VAR[UnfocusedOSDButtonsColor]</textcolor>
@@ -875,8 +888,11 @@
 				<visible>!Skin.HasSetting(Disable.PlayerControlButtons)</visible>
 			</control>
 			<control type="button" id="601">
-				<texturefocus />
-				<font>IconOSDButtons</font>
+				<texturefocus>osd/buttons/OSDFO.png</texturefocus>
+				<texturenofocus>osd/buttons/OSDNF.png</texturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>IconVideoOSDButtons</font>
 				<label></label>
 				<focusedcolor>$VAR[FocusedOSDButtonsColor]</focusedcolor>
 				<textcolor>$VAR[UnfocusedOSDButtonsColor]</textcolor>
@@ -889,8 +905,11 @@
 				<visible>!Skin.HasSetting(Disable.PlayerControlButtons)</visible>
 			</control>
 			<control type="button" id="603">
-				<texturefocus />
-				<font>IconOSDButtons</font>
+				<texturefocus>osd/buttons/OSDFO.png</texturefocus>
+				<texturenofocus>osd/buttons/OSDNF.png</texturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>IconVideoOSDButtons</font>
 				<label></label>
 				<focusedcolor>$VAR[FocusedOSDButtonsColor]</focusedcolor>
 				<textcolor>$VAR[UnfocusedOSDButtonsColor]</textcolor>
@@ -902,9 +921,13 @@
 				<visible>!Skin.HasSetting(Disable.PlayerControlButtons)</visible>
 			</control>
 			<control type="togglebutton" id="602">
-				<texturefocus />
-				<alttexturefocus />
-				<font>IconOSDButtons</font>
+				<texturefocus>osd/buttons/OSDFO.png</texturefocus>
+				<texturenofocus>osd/buttons/OSDNF.png</texturenofocus>
+				<alttexturefocus>osd/buttons/OSDFO.png</alttexturefocus>
+				<alttexturenofocus>osd/buttons/OSDNF.png</alttexturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>IconVideoOSDButtons</font>
 				<label></label>
 				<altlabel></altlabel>
 				<focusedcolor>$VAR[FocusedOSDButtonsColor]</focusedcolor>
@@ -918,8 +941,11 @@
 				<visible>!Skin.HasSetting(Disable.PlayerControlButtons)</visible>
 			</control>
 			<control type="button" id="604">
-				<texturefocus />
-				<font>IconOSDButtons</font>
+				<texturefocus>osd/buttons/OSDFO.png</texturefocus>
+				<texturenofocus>osd/buttons/OSDNF.png</texturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>IconVideoOSDButtons</font>
 				<label></label>
 				<focusedcolor>$VAR[FocusedOSDButtonsColor]</focusedcolor>
 				<textcolor>$VAR[UnfocusedOSDButtonsColor]</textcolor>
@@ -932,8 +958,11 @@
 				<visible>!Skin.HasSetting(Disable.PlayerControlButtons)</visible>
 			</control>
 			<control type="button" id="605">
-				<texturefocus />
-				<font>IconOSDButtons</font>
+				<texturefocus>osd/buttons/OSDFO.png</texturefocus>
+				<texturenofocus>osd/buttons/OSDNF.png</texturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>IconVideoOSDButtons</font>
 				<label></label>
 				<focusedcolor>$VAR[FocusedOSDButtonsColor]</focusedcolor>
 				<textcolor>$VAR[UnfocusedOSDButtonsColor]</textcolor>
@@ -945,8 +974,11 @@
 				<visible>!Skin.HasSetting(Disable.PlayerControlButtons)</visible>
 			</control>
 			<control type="button" id="706">
-				<texturefocus />
-				<font>IconOSDButtons</font>
+				<texturefocus>osd/buttons/OSDFO.png</texturefocus>
+				<texturenofocus>osd/buttons/OSDNF.png</texturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>IconVideoOSDButtonsSmall</font>
 				<label></label>
 				<focusedcolor>$VAR[FocusedOSDButtonsColor]</focusedcolor>
 				<textcolor>$VAR[UnfocusedOSDButtonsColor]</textcolor>
@@ -960,8 +992,11 @@
 				<oninfo>ActivateWindow(fullscreeninfo)</oninfo>
 			</control>
 			<control type="button" id="700">
-				<texturefocus />
-				<font>IconOSDButtons</font>
+				<texturefocus>osd/buttons/OSDFO.png</texturefocus>
+				<texturenofocus>osd/buttons/OSDNF.png</texturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>IconVideoOSDButtonsSmall</font>
 				<label></label>
 				<focusedcolor>$VAR[FocusedOSDButtonsColor]</focusedcolor>
 				<textcolor>$VAR[UnfocusedOSDButtonsColor]</textcolor>
@@ -972,8 +1007,11 @@
 				<oninfo>ActivateWindow(videobookmarks)</oninfo>
 			</control>
 			<control type="button" id="704">
-				<texturefocus />
-				<font>IconOSDButtons</font>
+				<texturefocus>osd/buttons/OSDFO.png</texturefocus>
+				<texturenofocus>osd/buttons/OSDNF.png</texturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>IconVideoOSDButtonsSmall</font>
 				<label></label>
 				<focusedcolor>$VAR[FocusedOSDButtonsColor]</focusedcolor>
 				<textcolor>$VAR[UnfocusedOSDButtonsColor]</textcolor>
@@ -985,8 +1023,11 @@
 				<visible>VideoPlayer.HasMenu</visible>
 			</control>
 			<control type="button" id="705">
-				<texturefocus />
-				<font>IconOSDButtons</font>
+				<texturefocus>osd/buttons/OSDFO.png</texturefocus>
+				<texturenofocus>osd/buttons/OSDNF.png</texturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>IconVideoOSDButtons</font>
 				<label></label>
 				<focusedcolor>$VAR[FocusedOSDButtonsColor]</focusedcolor>
 				<textcolor>$VAR[UnfocusedOSDButtonsColor]</textcolor>
@@ -998,8 +1039,11 @@
 				<visible>VideoPlayer.IsStereoscopic</visible>
 			</control>
 			<control type="button" id="707">
-				<texturefocus />
-				<font>IconOSDButtons</font>
+				<texturefocus>osd/buttons/OSDFO.png</texturefocus>
+				<texturenofocus>osd/buttons/OSDNF.png</texturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>IconVideoOSDButtonsSmall</font>
 				<label></label>
 				<focusedcolor>$VAR[FocusedOSDButtonsColor]</focusedcolor>
 				<textcolor>$VAR[UnfocusedOSDButtonsColor]</textcolor>
@@ -1015,9 +1059,12 @@
 				<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)</visible>
 			</control>
 			<control type="button" id="709">
-				<texturefocus />
-				<font>IconOSDButtons</font>
-				<label></label>
+				<texturefocus>osd/buttons/OSDFO.png</texturefocus>
+				<texturenofocus>osd/buttons/OSDNF.png</texturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>IconVideoOSDButtons</font>
+				<label></label>
 				<focusedcolor>$VAR[FocusedOSDButtonsColor]</focusedcolor>
 				<textcolor>$VAR[UnfocusedOSDButtonsColor]</textcolor>
 				<shadowcolor>shadow</shadowcolor>
@@ -2662,6 +2709,16 @@
 			<name>IconOSDButtons</name>
 			<filename>icons/MaterialSymbolsOutlined_Filled-Regular.ttf</filename>
 			<size>65</size>
+		</font>
+		<font>
+			<name>IconVideoOSDButtons</name>
+			<filename>MaterialIcons-Regular.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>IconVideoOSDButtonsSmall</name>
+			<filename>MaterialIcons-Regular.ttf</filename>
+			<size>40</size>
 		</font>
 		<font>
 			<name>IconMediaMenuButtons</name>
