@@ -72,6 +72,12 @@
 			<size>33</size>
 		</font>
 		<font>
+			<name>font14_tall</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>33</size>
+			<linespacing>1.2</linespacing>
+		</font>
+		<font>
 			<name>font14_bold</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<style>bold</style>

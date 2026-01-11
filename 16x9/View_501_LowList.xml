@@ -145,15 +145,15 @@
 					<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 					<include>VisibleFadeAnimation</include>
 					<control type="button">
-						<label>[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[31010]:[/COLOR][CR]$INFO[Container(9143).ListItem.Property(Next_Aired),, • ]$INFO[Container(9143).ListItem.Property(Last_Aired.Season),S]$INFO[Container(9143).ListItem.Property(Last_Aired.Episode),E, - ]$INFO[Container(9143).ListItem.Property(Next_Aired.Title)]</label>
+						<label>[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[31010]:[/COLOR] $INFO[Container(9143).ListItem.Property(Next_Aired)][CR]$INFO[Container(9143).ListItem.Property(Next_Aired.Number),, • ]$INFO[Container(9143).ListItem.Property(Next_Aired.Title)]</label>
 						<width>650</width>
-						<include>DefaultButtonsValues</include>
+						<include>LowListButtonsMultilineValues</include>
 						<visible>!String.IsEmpty(Container(9143).ListItem.Property(Next_Aired)) + !Skin.HasSetting(Disable.NextAired)</visible>
 					</control>
 					<control type="button">
 						<label>[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[126]:[/COLOR][CR]$VAR[VideoInfoTVSubtitleVar]</label>
 						<width>650</width>
-						<include>DefaultButtonsValues</include>
+						<include>LowListButtonsMultilineValues</include>
 						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [[!String.IsEmpty(ListItem.Status) | !String.IsEmpty(Container(9143).ListItem.Status)] + String.IsEmpty(Container(9143).ListItem.Property(Next_Aired)) + !Skin.HasSetting(Disable.NextAired)] + [Skin.HasSetting(nohighlist) | !Skin.HasSetting(nohighlist)]</visible>
 					</control>
 					<control type="button">
