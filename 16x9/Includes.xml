@@ -26,6 +26,7 @@
 	<include file="Variables_OnClick.xml" />
 	<include file="Variables_Paths.xml" />
 	<include file="Variables_Widgets.xml" />
+	<include file="IncludesUpNext.xml" />
 	<!-- Media Menu -->
 	<include name="SideBladeLeft">
 		<animation effect="slide" start="440,0" end="0,0" time="400" tween="quadratic" easing="out" condition="String.IsEmpty(Window(Home).Property(MediaMenu)) | Window.IsActive(videos) + Window.IsVisible(selectdialog) | Window.IsVisible(1126) | Window.IsVisible(progressdialog)">Conditional</animation>
@@ -3843,5 +3844,15 @@
 				<visible>String.IsEmpty(Window(Home).Property(Enable.ScreenshotMode))</visible>
 			</control>
 		</definition>
+	</include>
+	<!-- UpNext -->
+	<include name="HiddenButton">
+		<posx>-20</posx>
+		<posy>-20</posy>
+		<width>1</width>
+		<height>1</height>
+		<label></label>
+		<texturenofocus></texturenofocus>
+		<texturefocus></texturefocus>
 	</include>
 </includes>
