@@ -1199,7 +1199,7 @@
 	</variable>
 	<variable name="ThemeHomeSystemBarsColor">
 		<value condition="!String.IsEmpty(Skin.String(ThemeHomeSystemBarsColor))">$INFO[Skin.String(ThemeHomeSystemBarsColor)]</value>
-		<value>FF000000</value>
+		<value>FFFFFFFF</value>
 	</variable>
 	<variable name="ThemeHomeSystemGlowBarsColor">
 		<value condition="!String.IsEmpty(Skin.String(ThemeHomeSystemGlowBarsColor))">$INFO[Skin.String(ThemeHomeSystemGlowBarsColor)]</value>
