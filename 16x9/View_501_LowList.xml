@@ -79,7 +79,7 @@
 				<control type="image">
 					<width>440</width>
 					<height>640</height>
-					<aspectratio aligny="bottom">stretch</aspectratio>
+					<aspectratio aligny="bottom">scale</aspectratio>
 					<texture background="true">$VAR[FocusedPosterThumbVar]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
