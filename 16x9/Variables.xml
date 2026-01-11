@@ -1032,6 +1032,14 @@
 		<value condition="Integer.IsLess(ListItem.Duration(mins),1)">$INFO[ListItem.Duration(ss),,s]</value>
 		<value>$INFO[ListItem.Duration(h),,h]$INFO[ListItem.Duration(m),,m]</value>
 	</variable>
+	<variable name="PlainDurationVar">
+		<value condition="[String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + String.IsEmpty(ListItem.Duration) + !String.IsEmpty(Container(9143).ListItem.Property(Duration)) + !String.IsEqual(Container(9143).ListItem.Property(Duration),0)">$INFO[Container(9143).ListItem.Property(Duration)]</value>
+		<value condition="!Skin.HasSetting(Enable.HourMinuteDuration)">$INFO[ListItem.Duration(mins)]</value>
+		<value condition="Integer.IsEqual(ListItem.Duration(mins),60) | Integer.IsEqual(ListItem.Duration(mins),120) | Integer.IsEqual(ListItem.Duration(mins),180) | Integer.IsEqual(ListItem.Duration(mins),240) | Integer.IsEqual(ListItem.Duration(mins),300) | Integer.IsEqual(ListItem.Duration(mins),360) | Integer.IsEqual(ListItem.Duration(mins),420) | Integer.IsEqual(ListItem.Duration(mins),480) | Integer.IsEqual(ListItem.Duration(mins),540) | Integer.IsEqual(ListItem.Duration(mins),600)">$INFO[ListItem.Duration(hours)]</value>
+		<value condition="Integer.IsLess(ListItem.Duration(mins),60)">$INFO[ListItem.Duration(m)]</value>
+		<value condition="Integer.IsLess(ListItem.Duration(mins),1)">$INFO[ListItem.Duration(ss)]</value>
+		<value>$INFO[ListItem.Duration(h),,h]$INFO[ListItem.Duration(m)]</value>
+	</variable>
 	<variable name="CustomDurationVar">
 		<value condition="String.IsEmpty(Container(4800).ListItem.Duration) + !String.IsEmpty(Container(4801).ListItem.Duration) + !String.IsEqual(Container(4801).ListItem.Duration,0) + !Skin.HasSetting(Enable.HourMinuteDuration)">$INFO[Container(4801).ListItem.Duration(mins),,m]</value>
 		<value condition="String.IsEmpty(Container(4800).ListItem.Duration) + !String.IsEmpty(Container(4801).ListItem.Duration) + Skin.HasSetting(Enable.HourMinuteDuration) + [Integer.IsEqual(Container(4801).ListItem.Duration(mins),60) | Integer.IsEqual(Container(4801).ListItem.Duration(mins),120) | Integer.IsEqual(Container(4801).ListItem.Duration(mins),180) | Integer.IsEqual(Container(4801).ListItem.Duration(mins),240) | Integer.IsEqual(Container(4801).ListItem.Duration(mins),300) | Integer.IsEqual(Container(4801).ListItem.Duration(mins),360) | Integer.IsEqual(ListItem.Duration(mins),420) | Integer.IsEqual(Container(4801).ListItem.Duration(mins),480) | Integer.IsEqual(Container(4801).ListItem.Duration(mins),540) | Integer.IsEqual(Container(4801).ListItem.Duration(mins),600)]">$INFO[Container(4801).ListItem.Duration(hours),,h]</value>
