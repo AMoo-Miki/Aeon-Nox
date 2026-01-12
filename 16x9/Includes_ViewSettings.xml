@@ -651,14 +651,51 @@
 		</control>
 	</include>
 	<include name="LowListViewSettings">
-		<control type="radiobutton" id="1510">
+		<expression name="NoHighList">
+			[Container.Content(files) + Skin.HasSetting(files.nohighlist)] |
+			[Container.Content(songs) + Skin.HasSetting(songs.nohighlist)] |
+			[Container.Content(artists) + Skin.HasSetting(artists.nohighlist)] |
+			[Container.Content(albums) + Skin.HasSetting(albums.nohighlist)] |
+			[Container.Content(movies) + Skin.HasSetting(movies.nohighlist)] |
+			[Container.Content(tvshows) + Skin.HasSetting(tvshows.nohighlist)] |
+			[Container.Content(seasons) + Skin.HasSetting(seasons.nohighlist)] |
+			[Container.Content(episodes) + Skin.HasSetting(episodes.nohighlist)] |
+			[Container.Content(musicvideos) + Skin.HasSetting(musicvideos.nohighlist)] |
+			[Container.Content(genres) + Skin.HasSetting(genres.nohighlist)] |
+			[Container.Content(years) + Skin.HasSetting(years.nohighlist)] |
+			[Container.Content(actors) + Skin.HasSetting(actors.nohighlist)] |
+			[Container.Content(playlists) + Skin.HasSetting(playlists.nohighlist)] |
+			[Container.Content(plugins) + Skin.HasSetting(plugins.nohighlist)] |
+			[Container.Content(studios) + Skin.HasSetting(studios.nohighlist)] |
+			[Container.Content(directors) + Skin.HasSetting(directors.nohighlist)] |
+			[Container.Content(sets) + Skin.HasSetting(sets.nohighlist)] |
+			[Container.Content(tags) + Skin.HasSetting(tags.nohighlist)] |
+			[Container.Content(countries) + Skin.HasSetting(countries.nohighlist)] |
+			[Container.Content(roles) + Skin.HasSetting(roles.nohighlist)] |
+			[Container.Content(images) + Skin.HasSetting(images.nohighlist)]
+		</expression>
+		<control type="radiobutton" id="15101">
 			<description>LowList Toggle</description>
 			<include>ButtonCommonValues</include>
 			<label>$LOCALIZE[31499]</label>
-			<onclick>Skin.ToggleSetting(nohighlist)</onclick>
-			<selected>Skin.HasSetting(nohighlist)</selected>
-			<include>ReloadWindowOnclick</include>
-			<visible>![Control.IsVisible(501) + String.Contains(Container.FolderPath,plugin.program.advanced.launcher)]</visible>
+			<onclick>Skin.ToggleSetting($INFO[Container.Content,,.nohighlist])</onclick>
+			<selected>$EXP[NoHighList]</selected>
+			<include>ReloadWindowOnClick</include>
+			<onclick>SetFocus(50)</onclick>
+			<onclick>Container.SetViewMode(5011)</onclick>
+			<visible>!$EXP[NoHighList]</visible>
+			<visible>!Window.IsActive(music)</visible>
+		</control>
+		<control type="radiobutton" id="15102">
+			<description>LowList Toggle</description>
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31499]</label>
+			<onclick>Skin.ToggleSetting($INFO[Container.Content,,.nohighlist])</onclick>
+			<selected>$EXP[NoHighList]</selected>
+			<include>ReloadWindowOnClick</include>
+			<onclick>SetFocus(50)</onclick>
+			<onclick>Container.SetViewMode(5012)</onclick>
+			<visible>$EXP[NoHighList]</visible>
 			<visible>!Window.IsActive(music)</visible>
 		</control>
 		<control type="radiobutton" id="1511">
