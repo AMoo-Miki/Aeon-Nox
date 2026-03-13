@@ -181,6 +181,12 @@
 			<size>26</size>
 		</font>
 		<font>
+			<name>font12_boxed</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<style>uppercase</style>
+			<size>26</size>
+		</font>
+		<font>
 			<name>font13_title</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<style>uppercase</style>

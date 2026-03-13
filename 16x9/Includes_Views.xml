@@ -369,14 +369,15 @@
 					<font>IconMediumMD</font>
 					<label>[LIGHT]$VAR[ListItemOverlay][/LIGHT]</label>
 				</control>
-				<control type="label">
+				<!--control type="label">
 					<width>64</width>
-					<height>64</height>
-					<font>font12_title</font>
+					<height>63</height>
+					<top>1</top>
+					<font>font12_boxed</font>
 					<align>center</align>
 					<label>$VAR[ListItemOverlayShowsVar]</label>
 					<textcolor>grey</textcolor>
-				</control>
+				</control-->
 			</control>
 		</definition>
 	</include>

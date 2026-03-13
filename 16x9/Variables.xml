@@ -146,7 +146,7 @@
 		<value condition="String.IsEmpty(ListItem.PlayCount) + ListItem.HasVideoExtras">[COLOR grey][/COLOR]</value>
 		<value condition="!String.IsEmpty(ListItem.PlayCount) + ListItem.HasVideoExtras">[COLOR $VAR[ThemeLabelColor]][/COLOR]</value>
 		<value condition="!String.IsEmpty(ListItem.PlayCount)">[COLOR $VAR[ThemeLabelColor]][/COLOR]</value>
-		<value condition="[String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + ListItem.IsResumable"></value>
+		<value condition="[String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + ListItem.IsResumable">[COLOR grey][/COLOR]</value>
 		<value condition="!ListItem.IsParentFolder + !Container.Content(years) + !Container.Content(actors) + !Container.Content(tags) + !Container.Content(genres) + !Container.Content(playlists) + !String.IsEqual(Container.FolderPath,sources://video/)"></value>
 	</variable>
 	<variable name="ListItemOverlayShowsVar">
