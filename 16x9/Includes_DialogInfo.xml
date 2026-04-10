@@ -1085,18 +1085,18 @@
 	</include>
 	<include name="InfoContentTVShows">
 		<item>
-			<label>$INFO[Container(9143).ListItem.Property(Next_Aired.Season),S]$INFO[Container(9143).ListItem.Property(Next_Aired.Episode),E, - ]$INFO[Container(9143).ListItem.Property(Next_Aired.Title)]$INFO[Container(9143).ListItem.Property(Next_Aired), (,)]</label>
+			<label>$INFO[Container(9143).ListItem.Property(Next_Aired.Number)] $INFO[Container(9143).ListItem.Property(Next_Aired), (,)]</label>
 			<label2>$LOCALIZE[19031]:</label2>
 			<onclick>SetProperty(MoreInfoTitle,$LOCALIZE[19031])</onclick>
-			<onclick>SetProperty(MoreInfoContent,$INFO[Container(9143).ListItem.Property(Next_Aired.Season),S]$INFO[Container(9143).ListItem.Property(Next_Aired.Episode),E, - ]$ESCINFO[Container(9143).ListItem.Property(Next_Aired.Title)]$INFO[Container(9143).ListItem.Property(Next_Aired), (,)])</onclick>
+			<onclick>SetProperty(MoreInfoContent,$INFO[Container(9143).ListItem.Property(Next_Aired.Number)] - $ESCINFO[Container(9143).ListItem.Property(Next_Aired.Title)]$INFO[Container(9143).ListItem.Property(Next_Aired), (,)])</onclick>
 			<onclick>SetFocus(64)</onclick>
 			<visible>!String.IsEmpty(Container(9143).ListItem.Property(Next_Aired))</visible>
 		</item>
 		<item>
-			<label>$INFO[Container(9143).ListItem.Property(Last_Aired.Season),S]$INFO[Container(9143).ListItem.Property(Last_Aired.Episode),E, - ]$INFO[Container(9143).ListItem.Property(Last_Aired.Title)]$INFO[Container(9143).ListItem.Property(Last_Aired), (,)]</label>
+			<label>$INFO[Container(9143).ListItem.Property(Last_Aired.Number)] $INFO[Container(9143).ListItem.Property(Last_Aired), (,)]</label>
 			<label2>$LOCALIZE[31374]:</label2>
 			<onclick>SetProperty(MoreInfoTitle,$LOCALIZE[31374])</onclick>
-			<onclick>SetProperty(MoreInfoContent,$INFO[Container(9143).ListItem.Property(Last_Aired.Season),S]$INFO[Container(9143).ListItem.Property(Last_Aired.Episode),E, - ]$ESCINFO[Container(9143).ListItem.Property(Last_Aired.Title)]$INFO[Container(9143).ListItem.Property(Last_Aired), (,)])</onclick>
+			<onclick>SetProperty(MoreInfoContent,$INFO[Container(9143).ListItem.Property(Last_Aired.Number)] - $ESCINFO[Container(9143).ListItem.Property(Last_Aired.Title)]$INFO[Container(9143).ListItem.Property(Last_Aired), (,)])</onclick>
 			<onclick>SetFocus(64)</onclick>
 			<visible>!String.IsEmpty(Container(9143).ListItem.Property(Last_Aired))</visible>
 		</item>
