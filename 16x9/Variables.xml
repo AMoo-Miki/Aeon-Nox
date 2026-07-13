@@ -423,11 +423,15 @@
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]</value>
 		<value>$INFO[Player.Title]</value>
 	</variable>
+	<variable name="SeasonEpisodePrefixVar">
+		<value condition="VideoPlayer.Content(episodes) + Integer.IsLess(VideoPlayer.Episode,10)">$INFO[VideoPlayer.Season,,x]0$INFO[VideoPlayer.Episode,, ]</value>
+		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,, ]</value>
+	</variable>
 	<variable name="PlayerTitleLabelVar">
 		<value condition="Player.ChapterCount + !String.IsEmpty(Player.ChapterName) + !Skin.HasSetting(hide_chapternames)">$INFO[Player.Chapter,$LOCALIZE[21396] ]$INFO[Player.ChapterCount, / ]$INFO[Player.ChapterName, - ]</value>
 		<value condition="Player.ChapterCount + !Window.IsVisible(fullscreeninfo)">$INFO[Player.Chapter,$LOCALIZE[21396] ]$INFO[Player.ChapterCount, / ] • $INFO[Player.Title]</value>
 		<value condition="Player.ChapterCount + Window.IsVisible(fullscreeninfo)">$INFO[Player.Chapter,$LOCALIZE[21396] ]$INFO[Player.ChapterCount, / ]</value>
-		<value>$INFO[Player.Title]</value>
+		<value>$VAR[SeasonEpisodePrefixVar]$INFO[Player.Title]</value>
 	</variable>
 	<variable name="SkinSettingsDescriptionVar">
 		<value condition="Window.IsVisible(1117)" />
